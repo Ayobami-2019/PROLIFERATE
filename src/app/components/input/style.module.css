@@ -1,0 +1,159 @@
+/* .bg{
+    color: #28374B;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    bottom: -7px;
+    background-color: #ffffff;
+    z-index: 5;
+    right: -10px;
+    
+} */
+.labelInput{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 368px;
+}
+.labelInput div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.labelInput div svg{
+    stroke: #FF0000;
+    fill: #FF0000;
+}
+.nobg{
+    background: none;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+
+}
+/* input ::placeholder{
+    font-weight: 400;
+    font-size: 18px;
+    color: #666666;
+    font-family: "Open sans", sans-serif;
+} */
+.inputFieldDiv input::placeholder{
+    color: #666666;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Open sans", sans-serif;
+}
+.inputDiv {
+    position: relative;
+}
+
+.inputFieldDiv{
+    width: 100%;
+}
+.inputFieldDiv input{
+    border: 1px solid #CCCCCC;
+    /* box-shadow: 0 0 0 1px #878787; */
+    width: 100%;
+    border-radius: 8px;
+    font-family: "Open sans", sans-serif;
+    color: #666666;
+    padding: 16px;
+    background: #FFFFFF;
+}
+.inputFieldDiv input:focus{
+    border: 1.5px solid #30407F;
+    outline: none;
+}
+/* .searchField{
+    
+    max-width: 325px;
+    width: 100%;
+}
+.searchField input{
+    width: 375px;
+    /* width: 100%; */
+    /* background: hsl(210, 40%, 92%); */
+/* } */ 
+/* @media (max-width: 650px) {
+    .searchField input{
+        max-width: 300px;
+    }
+}
+@media (max-width: 621px) {
+    .searchField input{
+        width: 100%;
+    }
+} */
+
+
+/* .search{
+    
+    margin-top: 10px; */
+    /* padding: 15px 25px !important; */
+    /* box-shadow: none !important;
+    width: 100%;
+    display: flex;
+    align-items: center; */
+    
+/* } */
+
+/* .loginBtn{
+    width: fit-content;
+} */
+.inputFieldDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* @media (max-width: 650px) { */
+    /* .inputDiv .inputFieldDiv{
+        width: 100%;
+    } */
+/* } */
+/* .searchField{
+    display: flex;
+    align-items: center;
+} */
+.icon{
+    position: absolute;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    cursor: pointer;
+    
+}
+/* .searchIcon{
+    right: 10px;
+    
+}
+.icon svg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.searchDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-content: center;
+}
+.searchList{
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    padding: 0 !important;
+    border-radius: 15px;
+    /* border-radius: 15px;
+    padding: 20px; */
+/* } */
+/* .searchList li{
+    list-style: none;
+    padding: 10px;
+    
+} */ 
+/* .s */

@@ -1,0 +1,128 @@
+.section{
+    width: 100%;
+    
+}
+.login{
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid var(--brown);
+    box-shadow: 0 4 4 0 rgb(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: var(--light-blue);
+    height: 100vh;
+    
+}
+.loginDiv1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--light-blue);
+    padding-top: 3%;
+    width: 50%;
+}
+.logo{
+    padding: 0 5%;
+}
+.loginDiv2{
+    background: var(--opacity-white);
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 50%;
+    border-left: 1px solid var(--brown);
+}
+.loginDiv2 h3{
+    color: #000000;
+    
+    font-weight: 700;
+    font-size: 32px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 368px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+.buttons button{
+    padding: 10px 25px;
+    color: var(--opacity-white);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+.buttons .loginButton{
+    background: var(--button-hover);
+    border-radius: 15px;
+}
+.buttons .registerButton {
+    background-color: var(--brown);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 8px;
+    align-items: center;
+}
+.forgetp{
+    color: #969696;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.otherAuth{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #000000;
+    align-items: center;
+}
+.otherAuth div{
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    justify-content: center;
+}
+.otherAuth div svg{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.facebook, .linkedin{
+    fill: #0085FF
+}
+.error{
+    color: #EB5757;
+    font-family: 'Noto sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+.forError .error{
+    margin-top: 10px;
+}
+.forError .errorDiv input{
+    border: 1px solid #EB5757;
+}
+.errorIcon{
+    position: absolute;
+    right: 8px;
+    bottom: 43px;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    cursor: pointer;
+}
+.forError{
+    position: relative;
+}

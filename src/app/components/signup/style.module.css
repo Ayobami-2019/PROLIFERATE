@@ -1,0 +1,110 @@
+.signUp{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 3%;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.main ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: ; */
+}
+.main ul li{
+    border: 1px solid #C9C9C9;
+    width: 143px;
+    height: 53px;
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+.main ul li:hover, .main ul li a.active{
+    background: #1F70B2;
+    border: 1px solid#DE4B18;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.main ul li .list{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #C9C9C9;
+    width: 100% ;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.main ul li .list:hover{
+    border-bottom: 1px solid #E6EAE8;
+}
+.heading{
+    font-weight: 700;
+    font-size: 32px;
+    color: 000000;
+}
+.formInfo p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    width: 698px;
+    text-align: center;
+    padding: 5px 20px;
+}
+.formBox{
+    border: 1px solid rgb(0, 0, 0, 0.25);
+    border-radius: 15px;
+    box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding-bottom: 60px;
+    place-items: center;
+    gap: 30px;
+}
+.footer{
+    border: 1px solid #969696;
+    box-shadow: 0 20px 34px 5 rgb(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+.footer button{
+    background: #186BAD;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 16px 0 16px 16px;
+    margin: 10px;
+    gap: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    width: 180px;
+}
+/* .footer button svg{
+    height:  13.31px;
+    width: 8.03px;
+} */
