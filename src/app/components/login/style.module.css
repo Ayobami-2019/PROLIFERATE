@@ -10,7 +10,7 @@
     flex-direction: row;
     width: 100%;
     background: var(--light-blue);
-    height: 100vh;
+    /* height: 100vh; */
     
 }
 .loginDiv1{

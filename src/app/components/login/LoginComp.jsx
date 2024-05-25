@@ -123,7 +123,7 @@ export const LoginComp = () => {
                     <div>
                         <div className={style.buttons}>
                             <button type='submit' className={style.loginButton} onClick={handleLogin} disabled={isSubmitting}>Login</button>
-                            <Link to={routes.signUp()}><button className={style.registerButton}>Register &nbsp; <RiArrowDownSFill /></button></Link>
+                            <Link to={routes.personalInfo()}><button className={style.registerButton}>Register &nbsp; <RiArrowDownSFill /></button></Link>
                         </div>
                         <p className={style.forgetp}>Forgot your password?</p>
                     </div>

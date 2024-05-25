@@ -14,6 +14,8 @@ export const CustomInput = ({ ...props }) => {
     let label = props.label
     let type = props.type
     let newClass = props.className
+    let required = props.required
+    let value = props.value
 
 
     if (props.type === 'password') {
@@ -25,13 +27,20 @@ export const CustomInput = ({ ...props }) => {
     // const combineClass = combinedClasses(props.className)
     return (
         <div className={style.inputDiv}>
-            <div className={style.labelInput}>
+            <div className={type=='textarea' ? combinedClasses(style.textarea, style.labelInput) :style.labelInput}>
                 <div>
-                    <label className={style.nobg}>{label } </label>
-                    {props.important ? <RiAsterisk /> : ''}
+                    <label className={style.nobg}>{label} </label>
+                    {props.required ? <RiAsterisk /> : ''}
                 </div>
+                {/* {type == "select"&&<select {...props} value={value}>{props.children}</select> || 
+                    type=="input" &&<input {...props} type={type} required={required} className={newClass} /> ||
+                    type=="textarea" &&<textarea {...props} name="" id="" className={newClass}></textarea>
+                    } */}
                 <div className={style.inputFieldDiv}>
-                    <input {...props} type={type} className={newClass} />
+                    {type == 'textarea' ? <textarea {...props} name="" id="" className={newClass}></textarea> :
+                        type == "select" ?
+                            <select {...props} value={value}>{props.children}</select> :
+                            <input {...props} type={type} required={required} className={newClass} />}
                     {
                         props.type === 'password' &&
                         <div onClick={handleIconToggle} className={style.icon}>
