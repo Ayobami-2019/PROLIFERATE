@@ -26,9 +26,9 @@ export const CustomInput = ({ ...props }) => {
     }
     // const combineClass = combinedClasses(props.className)
     return (
-        <div className={style.inputDiv}>
-            <div className={type=='textarea' ? combinedClasses(style.textarea, style.labelInput) :style.labelInput}>
-                <div>
+        <div className={type=='textarea' ? combinedClasses(style.textarea, style.labelInput) :style.inputDiv}>
+            {/* <div className={style.labelInput}> */}
+                <div className={style.labelDiv}>
                     <label className={style.nobg}>{label} </label>
                     {props.required ? <RiAsterisk /> : ''}
                 </div>
@@ -52,7 +52,7 @@ export const CustomInput = ({ ...props }) => {
                         </div>
                     }
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     )
 }

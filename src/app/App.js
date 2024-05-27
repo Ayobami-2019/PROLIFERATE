@@ -7,17 +7,17 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { Login } from './components/login/index.jsx';
 // import { SignUp } from './components/signup/index.jsx';
 import { AcademicsForm, ConfirmEmail, EmailComfirmed, GoalsForm, InfoForm, PreferencesForm, Terms } from './components/signup/signUpComp.jsx';
-
+import { Form1, Form2, Form3, Form4, Form5, TeachingStyleForm, Upload, } from './components/signup/TutorSignUp.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Login />
   },
-  // {
-  //   path: routes.signUp(),
-  //   element: <SignUp/>
-  // },
+  {
+    path: routes.login(),
+    element: <Login/>
+  },
   {
     path: routes.personalInfo(),
     element: <InfoForm/>
@@ -45,6 +45,38 @@ const router = createBrowserRouter([
   {
     path: routes.emailConfirmed(),
     element: <EmailComfirmed/>
+  },
+  {
+    path: routes.tutorPersonalInfo(),
+    element: <Form1/>
+  },
+  {
+    path: routes.tutorAcademics(),
+    element: <Form2/>
+  },
+  {
+    path: routes.tutorPreferences(),
+    element: <Form3/>
+  },
+  {
+    path: routes.tutorTerms(),
+    element: <Form5/>
+  },
+  {
+    path: routes.tutorConfirmEmail(),
+    element: <ConfirmEmail/>
+  },
+  {
+    path: routes.tutorEmailConfirmed(),
+    element: <ConfirmEmail/>
+  },
+  {
+    path: routes.style(),
+    element: <TeachingStyleForm/>
+  },
+  {
+    path: routes.upload(),
+    element: <Upload/>
   },
   {
     path: '*',

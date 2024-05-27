@@ -1,50 +1,59 @@
-.signUp{
+.signUp {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 50px;
     padding: 3%;
 }
-.main{
+
+.main {
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
 }
-.main ul{
+
+.main ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     /* border: ; */
 }
-.main ul li{
+
+.main ul li {
     border: 1px solid #C9C9C9;
     width: 143px;
     height: 53px;
     list-style: none;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    
+
 }
-.main ul li a.active{
+.main ul li a{
+    padding: 10px;
+    text-align: center;
+}
+.main ul li a.active {
     background: #1F70B2;
     border: 1px solid#DE4B18;
     color: #ffffff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.main ul li hr{
+
+.main ul li hr {
     color: #000000;
 }
-.main ul li .list{
+
+.main ul li .list {
     display: flex;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 12px;
     /* margin-bottom: 5px; */
     border-bottom: 1px solid #C9C9C9;
-    width: 100% ;
+    width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -56,13 +65,15 @@ main ul li {
     position: relative;
     z-index: 1;
     cursor: pointer;
-  }
-  .main ul li hr{
+}
+
+.main ul li hr {
     position: absolute;
     top: 45px;
     width: 145px;
-   }
-   /* .line{
+}
+
+/* .line{
     color: #000000;
    } */
 /* .main ul li .list:hover{
@@ -77,21 +88,23 @@ main ul li {
     left: 1px;
     top: 12px;
   } */
-.heading{
+.heading {
     font-weight: 700;
     font-size: 32px;
     color: 000000;
 }
-.formInfo{
+
+.formInfo {
     width: 100%;
     /* background: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     /* height: 200px; */
 }
-.formInfo>p{
+
+.formInfo>p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -100,7 +113,8 @@ main ul li {
     text-align: center;
     padding: 5px 20px;
 }
-.formBox{
+
+.formBox {
     border: 1px solid rgb(0, 0, 0, 0.25);
     border-radius: 15px;
     box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
@@ -111,14 +125,16 @@ main ul li {
     gap: 30px;
     height: 380px;
     padding: 20px 0;
-    
+
 }
-.formDiv{
+
+.formDiv {
     height: 200px;
     width: 100%;
     background: red;
 }
-.form{
+
+.form {
     /* display: grid;
     grid-template-columns: 1fr 1fr 1fr; */
     display: flex;
@@ -128,21 +144,23 @@ main ul li {
     /* padding-bottom: 60px; */
     gap: 10px;
     /* place-items: center; */
-    
+
     /* background-color: blue; */
     height: 280px;
     /* padding-left: 50px; */
     /* padding-right: 50px; */
-    
+
 }
-.footer{
+
+.footer {
     border: 1px solid #969696;
     box-shadow: 0 20px 34px 5px rgb(0, 0, 0, 0.1);
     display: flex;
     justify-content: flex-end;
     border-radius: 10px;
 }
-.footer button{
+
+.footer button {
     background: #186BAD;
     color: #ffffff;
     display: flex;
@@ -158,13 +176,14 @@ main ul li {
     font-weight: 400;
     width: 180px;
 }
+
 /* .footer button svg{
     height:  13.31px;
     width: 8.03px;
 } */
-.proppedFooter .noBgButton{
+.proppedFooter .noBgButton {
     background: none;
-    border: 1px solid #0162E8 ;
+    border: 1px solid #0162E8;
     width: 345.16px;
     border-radius: 6px;
     color: #0162E8;
@@ -172,15 +191,19 @@ main ul li {
     font-family: 'Monteserrat', sans-serif;
     margin-left: 25px;
 }
-.proppedFooter{
+
+.proppedFooter {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-.termTitle{
+
+.termTitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 600;
 }
-.term{
+
+.term {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -193,10 +216,118 @@ main ul li {
     flex-direction: column;
     justify-content: center; */
 }
+
 /* .term ol{
     background: red;
 } */
-.textarea{
+.textarea {
     /* height: 100px; */
-    width: 831px !important;
+    max-width: 831px !important;
+    width: 100%;
+}
+
+@media (max-width:530px) {
+
+    .formBox,
+    .form {
+        height: fit-content;
+    }
+
+    .formBox {
+        border: none;
+        box-shadow: none;
+        padding: 20px;
+
+    }
+
+    .formBox p {
+        width: fit-content;
+        font-family: 'Open Sans' sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+
+    .footer {
+        margin-top: 30px;
+        border: none;
+        box-shadow: none;
+        padding: 0 20px;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .login {
+        background: #ffffff;
+        height: 100%;
+        padding: 30px 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main {
+        border: none;
+        padding: 0 0 50px 0;
+        /* margin-top: -10px; */
+        /* background: black; */
+
+        /* box-sizing: unset; */
+    }
+
+    .proppedFooter .noBgButton {
+        width: 103px;
+        padding: 10px;
+    }
+
+    .footer button {
+        padding: 10px 25px;
+        width: fit-content;
+    }
+
+    a {
+        display: grid;
+
+    }
+
+    .term {
+        height: fit-content;
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .termsInfo>p {
+        display: flex;
+        justify-content: flex-start;
+        text-align: start;
+        padding: 0;
+    }
+    .mobileformbox{
+        margin-top: -200px;
+    }
+    /* .term p{
+    padding: 0;
+} */
+    /* .form{
+    padding: 0 20px;
+   } */
+}
+
+@media (max-width:333px) {
+    .proppedFooter {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .footer button,
+    .proppedFooter .noBgButton {
+        width: 150px;
+    }
+
+    .footer button {
+        margin: 10px 10px 10px 25px;
+        padding: 10px;
+    }
 }

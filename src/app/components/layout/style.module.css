@@ -1,0 +1,32 @@
+
+.header{
+    background: #ffffff;
+}
+.logo{
+    height: 54px !important;
+    width: 162px !important;
+    /* padding: 15px 0 15px 0; */
+    margin-left: 25px;
+}
+.logo rect{
+    height: 54px;
+    width: 162px;
+}
+.header>div{
+    height: 75px;
+    background: var(--button-hover);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 360px) {
+    .header>div{
+        padding: 10px;
+        text-align: center;
+    }
+}

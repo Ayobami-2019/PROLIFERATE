@@ -18,6 +18,56 @@ import { combinedClasses } from '../../utilities/format';
 import { useMediaQuery } from '@chakra-ui/react';
 import { MobileOnboardingLayout } from '../layout';
 
+
+export const Form1 = () => {
+    return (
+        <section className={style.section}>
+            <InfoForm />
+        </section>
+    )
+}
+
+export const Form2 = () => {
+    return (
+        <section className={style.section}>
+            <AcademicsForm />
+        </section>
+    )
+}
+
+export const Form6 = () => {
+    return (
+        <section className={style.section}>
+            <TeachingStyleForm />
+        </section>
+    )
+}
+export const Form7 = () => {
+    return (
+        <section className={style.section}>
+            <Upload />
+        </section>
+    )
+}
+
+export const Form3 = () => {
+    return (
+        <section className={style.section}>
+            <PreferencesForm />
+        </section>
+    )
+}
+
+export const Form5 = () => {
+    return (
+        <section className={style.section}>
+            <Terms />
+        </section>
+    )
+}
+
+
+
 export const InfoForm = () => {
     const mobileSideBar = useMediaQuery('(max-width: 530px)')
     const [input, setInput] = React.useState({
@@ -34,7 +84,7 @@ export const InfoForm = () => {
         <>
             {mobileSideBar.includes(true) ?
                 <section className={style.login}>
-                    <MobileOnboardingLayout>STUDENT REGISTRATION | PERSONAL INFORMATION</MobileOnboardingLayout>
+                    <MobileOnboardingLayout>Tutor Registration</MobileOnboardingLayout>
                     <main className={style.main}>
                         <div className={style.formBox}>
                             <div className={style.formInfo}>
@@ -43,25 +93,28 @@ export const InfoForm = () => {
 
                             <form action="" className={style.form}>
                                 <CustomInput onChange={handleInput} name='firstName' type="text" placeholder="First Name" label={"First Name:"} important={true} required />
+                                <CustomInput onChange={handleInput} name='contact' type="text" placeholder="contact" label={"Contact Number:"} important={true} required />
                                 <CustomInput onChange={handleInput} name='lastName' type="text" placeholder="Last Name" label={"Last Name:"} important={true} required />
-                                <CustomInput onChange={handleInput} name='phone' type="number" placeholder="Enter your contact number" label={"Contact Number:"} important={true} required />
-                                <CustomInput onChange={handleInput} name='email' type="email" placeholder="Enter your email address" label={"Username:"} required />
+
+                                <CustomInput onChange={handleInput} name='age' type="number" placeholder="Enter your age" label={"Age:"} />
+
+                                <CustomInput onChange={handleInput} name='email' type="email" placeholder="Enter your email address" label={"Email:"} required />
                                 <CustomInput onChange={handleInput} name='gender' type="select" placeholder="Gender" label={"Gender:"}>
                                     <option value="Gender">Gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </CustomInput>
-                                <CustomInput onChange={handleInput} name='age' type="number" placeholder="Enter your age" label={"Age:"} />
+
                             </form>
 
                         </div>
                     </main>
-                    <Link to={routes.academics()}><SignUpFooter /></Link>
+                    <Link to={routes.tutorAcademics()}><SignUpFooter /></Link>
                 </section> :
                 <section className={style.signUp}>
                     <SignUpHeader />
                     <main className={style.main}>
-                        <h3 className={style.heading}>Student Registration | Personal Information</h3>
+                        <h3 className={style.heading}>Tutor Registration</h3>
                         {/* {props[0].title} */}
                         <RegisterNav />
                         <div className={style.formBox}>
@@ -70,19 +123,21 @@ export const InfoForm = () => {
                             </div>
                             <form action="" className={style.form}>
                                 <CustomInput onChange={handleInput} name='firstName' type="text" placeholder="First Name" label={"First Name:"} important={true} required />
+                                <CustomInput onChange={handleInput} name='contact' type="text" placeholder="contact" label={"Contact Number:"} important={true} required />
                                 <CustomInput onChange={handleInput} name='lastName' type="text" placeholder="Last Name" label={"Last Name:"} important={true} required />
-                                <CustomInput onChange={handleInput} name='phone' type="number" placeholder="Enter your contact number" label={"Contact Number:"} important={true} required />
-                                <CustomInput onChange={handleInput} name='email' type="email" placeholder="Enter your email address" label={"Username:"} required />
+
+                                <CustomInput onChange={handleInput} name='age' type="number" placeholder="Enter your age" label={"Age:"} />
+
+                                <CustomInput onChange={handleInput} name='email' type="email" placeholder="Enter your email address" label={"Email Address:"} required />
                                 <CustomInput onChange={handleInput} name='gender' type="select" placeholder="Gender" label={"Gender:"}>
                                     <option value="Gender">Gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </CustomInput>
-                                <CustomInput onChange={handleInput} name='age' type="number" placeholder="Enter your age" label={"Age:"} />
                             </form>
                         </div>
                     </main>
-                    <Link to={routes.academics()}><SignUpFooter /></Link>
+                    <Link to={routes.tutorAcademics()}><SignUpFooter /></Link>
                 </section>}
         </>
     )
@@ -106,49 +161,43 @@ export const AcademicsForm = () => {
         <>
             {mobileSideBar.includes(true) ?
                 <section className={style.login}>
-                    <MobileOnboardingLayout>STUDENT REGISTRATION | ACADEMICS DETAILS</MobileOnboardingLayout>
+                    <MobileOnboardingLayout>Tutor Registration</MobileOnboardingLayout>
                     <main className={style.main}>
                         <div className={style.formBox}>
                             <div className={style.formInfo}>
-                                <p>Please enter the name of your school, college, or university, along with your grade or year of study.
-                                    Select the subjects you need tutoring for and share your current GPA or grades.</p>
+                                <p>Please enter the name of your school, college, or university.
+                                    Select the subjects you will be tutoring for and enter the grade(s) you currently teach.   </p>
                             </div>
                             <form action="" className={style.form}>
-                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Grade/Year:"} >
-                                    <option value="Enter your grade">Enter your grade</option>
-                                    <option value="Grade 1">Grade 1</option>
-                                    <option value="Grade 2">Grade 2</option>
-                                    <option value="Grade 3">Grade 3</option>
-                                    <option value="Grade 4">Grade 4</option>
-                                    <option value="Grade 5">Grade 5</option>
-                                    <option value="Grade 6">Grade 6</option>
-                                    <option value="Grade 7">Grade 7</option>
-                                    <option value="Grade 8">Grade 8</option>
+                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Highest Education Level Attained:"} >
+                                    <option value="Select Educational Level">Select Educational Level</option>
+                                    <option value="High School Diploma">High School Diploma</option>
+                                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                    <option value="Master's Degree">Master's Degree</option>
+                                    <option value="Ph.D.">Ph.D.</option>
                                 </CustomInput>
-                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="Multiselect tags" label={"Subjects Needing Tutoring:"}>
+                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="Multiselect tags" label={"Years of Teaching Experience:"}>
                                     <option value="Multiselect tags">Multiselect tags</option>
                                     <option value="Male">Online </option>
                                     <option value="Female">In person</option>
                                     <option value="Female">Hybrid</option>
                                 </CustomInput>
-                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Attendance Type:"}>
-                                    <option value=""></option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </CustomInput>
-                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Enter your current location, country, state " label={"Current Location:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="How many years of experience " label={"Major/Field of Study:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Enter your current grade " label={"Subjects Expertise:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Name of School you currently teach in " label={"Current School:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Select your current location " label={"Location:"} />
 
                             </form>
                         </div>
                     </main>
-                    <Link to={routes.preferences()}><SignUpFooter>
-                        <Link to={routes.personalInfo()}><button className={style.noBgButton}>Back</button></Link>
+                    <Link to={routes.tutorAcademics()}><SignUpFooter>
+                        <Link to={routes.tutorPersonalInfo()}><button className={style.noBgButton}>Back</button></Link>
                     </SignUpFooter></Link>
                 </section> :
                 <section className={style.signUp}>
                     <SignUpHeader />
                     <main className={style.main}>
-                        <h3 className={style.heading}>Student Registration | EDUCATIONAL INFORMATION</h3>
+                        <h3 className={style.heading}>Tutor Registration</h3>
                         {/* {props[0].title} */}
                         <RegisterNav />
                         <div className={style.formBox}>
@@ -157,35 +206,113 @@ export const AcademicsForm = () => {
                                     Select the subjects you need tutoring for and share your current GPA or grades.</p>
                             </div>
                             <form action="" className={style.form}>
-                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Grade/Year:"} >
-                                    <option value="Enter your grade">Enter your grade</option>
-                                    <option value="Grade 1">Grade 1</option>
-                                    <option value="Grade 2">Grade 2</option>
-                                    <option value="Grade 3">Grade 3</option>
-                                    <option value="Grade 4">Grade 4</option>
-                                    <option value="Grade 5">Grade 5</option>
-                                    <option value="Grade 6">Grade 6</option>
-                                    <option value="Grade 7">Grade 7</option>
-                                    <option value="Grade 8">Grade 8</option>
+                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Highest Education Level Attained:"} >
+                                    <option value="High School Diploma/Bachelor's Degree/Master's Degree/Ph.D.">High School Diploma/Bachelor's Degree/Master's Degree/Ph.D.</option>
+                                    <option value="High School Diploma">High School Diploma</option>
+                                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                    <option value="Master's Degree">Master's Degree</option>
+                                    <option value="Ph.D.">Ph.D.</option>
                                 </CustomInput>
-                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="Multiselect tags" label={"Subjects Needing Tutoring:"}>
+                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="Multiselect tags" label={"Years of Teaching Experience:"}>
                                     <option value="Multiselect tags">Multiselect tags</option>
                                     <option value="Male">Online </option>
                                     <option value="Female">In person</option>
                                     <option value="Female">Hybrid</option>
                                 </CustomInput>
-                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Attendance Type:"}>
-                                    <option value=""></option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </CustomInput>
-                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Enter your current location, country, state " label={"Current Location:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="How many years of experience " label={"Major/Field of Study:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Enter your current grade " label={"Subjects Expertise:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Name of School you currently teach in " label={"Current School:"} />
+                                <CustomInput onChange={handleInput} name='username' type="text" placeholder="Select your current location " label={"Location:"} />
 
                             </form>
                         </div>
                     </main>
-                    <Link to={routes.preferences()}><SignUpFooter>
-                        <Link to={routes.personalInfo()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
+                    <Link to={routes.style()}><SignUpFooter>
+                        <Link to={routes.tutorPersonalInfo()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
+                    </SignUpFooter></Link>
+                </section>}
+        </>
+    )
+}
+
+export const TeachingStyleForm = () => {
+    const mobileSideBar = useMediaQuery('(max-width: 530px)')
+    const [input, setInput] = React.useState({
+        username: '',
+        password: '',
+        checkbox: false
+    })
+    const handleInput = (e) => {
+        // e.persist()
+        setInput({ ...input, [e.target.name]: e.target.value })
+    }
+
+    return (
+        <>
+            {mobileSideBar.includes(true) ?
+                <section className={style.login}>
+                    <MobileOnboardingLayout>Tutor Registration</MobileOnboardingLayout>
+                    <main className={style.main}>
+                        <div className={style.formBox}>
+                            <div className={style.formInfo}>
+                                <p>Choose whether you prefer online or in-person tutoring and specify your availability for sessions.
+                                    You can also mention any additional preferences or requirements you have for the tutoring sessions.   </p>
+                            </div>
+                            <form action="" className={style.form}>
+                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Teaching Style:"} >
+                                    <option value="Interactive/Lecture-based/Hands-on/Customized">Interactive/Lecture-based/Hands-on/Customized</option>
+                                    <option value="Interactive">Interactive</option>
+                                    <option value="Lecture-based">Lecture-based</option>
+                                    <option value="Hands-on">Hands-on</option>
+                                    <option value="Customized">Customized</option>
+                                </CustomInput>
+                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Describe your approach to tutoring and how you engage with students" label={"Approach to Tutoring:"} className={style.textarea} />
+                                <CustomInput onChange={handleInput} name='attendance' type="select" placeholder="Multiselect tags" label={"Attendance Type:"}>
+                                    <option value="onsite, hybrid, online">onsite, hybrid, online</option>
+                                    <option value="Male">Onsite </option>
+                                    <option value="Hybrid">Hybrid</option>
+                                    <option value="Online">Online</option>
+                                </CustomInput>
+                            
+                            </form>
+                        </div>
+                    </main>
+                    <Link to={routes.tutorPreferences()}><SignUpFooter>
+                        <Link to={routes.tutorAcademics()}><button className={style.noBgButton}>Back</button></Link>
+                    </SignUpFooter></Link>
+                </section> :
+                <section className={style.signUp}>
+                    <SignUpHeader />
+                    <main className={style.main}>
+                        <h3 className={style.heading}>Tutor Registration</h3>
+                        {/* {props[0].title} */}
+                        <RegisterNav />
+                        <div className={style.formBox}>
+                            <div className={style.formInfo}>
+                                <p>Please enter the name of your school, college, or university, along with your grade or year of study.
+                                    Select the subjects you need tutoring for and share your current GPA or grades.</p>
+                            </div>
+                            <form action="" className={style.form}>
+                                <CustomInput onChange={handleInput} name='username' type="select" placeholder="" label={"Teaching Style:"} >
+                                    <option value="Interactive/Lecture-based/Hands-on/Customized">Interactive/Lecture-based/Hands-on/Customized</option>
+                                    <option value="Interactive">Interactive</option>
+                                    <option value="Lecture-based">Lecture-based</option>
+                                    <option value="Hands-on">Hands-on</option>
+                                    <option value="Customized">Customized</option>
+                                </CustomInput>
+                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Describe your approach to tutoring and how you engage with students" label={"Approach to Tutoring:"} className={style.textarea} />
+                                <CustomInput onChange={handleInput} name='attendance' type="select" placeholder="Multiselect tags" label={"Attendance Type:"}>
+                                    <option value="onsite, hybrid, online">onsite, hybrid, online</option>
+                                    <option value="Male">Onsite </option>
+                                    <option value="Hybrid">Hybrid</option>
+                                    <option value="Online">Online</option>
+                                </CustomInput>
+                            
+                            </form>
+                        </div>
+                    </main>
+                    <Link to={routes.tutorPreferences()}><SignUpFooter>
+                        <Link to={routes.tutorAcademics()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
                     </SignUpFooter></Link>
                 </section>}
         </>
@@ -208,38 +335,47 @@ export const PreferencesForm = () => {
         <>
             {mobileSideBar.includes(true) ?
                 <section className={style.login}>
-                    <MobileOnboardingLayout>STUDENT REGISTRATION | PREFERENCES</MobileOnboardingLayout>
+                    <MobileOnboardingLayout>Tutor Registration</MobileOnboardingLayout>
                     <main className={style.main}>
                         <div className={style.formBox}>
                             <div className={style.formInfo}>
-                                <p>Choose whether you prefer online or in-person tutoring and specify your availability for sessions.
-                                    You can also mention any additional preferences or requirements you have for the tutoring sessions.</p>
+                                <p>Describe any short-term goals or challenges you're facing and outline your long-term goals or career aspirations.
+                                    This information will help us tailor the tutoring experience to meet your needs.</p>
                             </div>
-                            <form action="" className={style.form}>
-                                <CustomInput onChange={handleInput} name='availabilty' type="select" placeholder="Weekdays, Weekends, Mornings, Afternoons, Evenings" label={"Availability:"}>
-                                    {/* <option value="Multiselect tags">Multiselect tags</option> */}
-                                    <option value="Weekdays">Weekdays</option>
-                                    <option value="Weekends">Weekends</option>
-                                    <option value="Mornings">Mornings</option>
-                                    <option value="Afternoons">Afternoons</option>
-                                    <option value="Evenings">Evenings</option>
-                                </CustomInput>
-                                <CustomInput onChange={handleInput} name='others' type="text" placeholder="Specify any additional preferences or requirements" label={"Additional Preferences/Requirements:"} />
-                                <CustomInput onChange={handleInput} name='lang' type="select" placeholder="Enter your preferred language" label={"Communication Language:"}>
-                                    <option value="English">English</option>
-                                    <option value="Others">Others</option>
-                                </CustomInput>
-                            </form>
+                            <div>
+                                <form action="" className={style.form}>
+                                    <CustomInput onChange={handleInput} name='availabilty' type="select" placeholder="Weekdays, Weekends, Mornings, Afternoons, Evenings" label={"Preferred Subjects:"}>
+                                        <option value="Select specific subjects within your expertise that you will be tutoring">Select specific subjects within your expertise that you will be tutoring</option>
+                                        <option value="Weekdays">Weekdays</option>
+                                        <option value="Weekends">Weekends</option>
+                                        <option value="Mornings">Mornings</option>
+                                        <option value="Afternoons">Afternoons</option>
+                                        <option value="Evenings">Evenings</option>
+                                    </CustomInput>
+
+                                    <CustomInput onChange={handleInput} name='lang' type="select" placeholder="" label={"Student Assessment Approach:"}>
+                                        <option value="quizzes, tests, projects, or other methods.">quizzes, tests, projects, or other methods.</option>
+                                        <option value="quizzes">quizzes</option>
+                                        <option value="tests">tests</option>
+                                        <option value="projects">projectss</option>
+                                        <option value="other methods">other methods</option>
+                                    </CustomInput>
+                                    <CustomInput onChange={handleInput} name='others' type="text" placeholder="Specify if you are available for additional support outside of scheduled tutoring sessions" label={"Availability for Additional Support:"} />
+                                </form>
+                                <div>
+
+                                </div>
+                            </div>
                         </div>
                     </main>
-                    <Link to={routes.goals()}><SignUpFooter>
-                        <Link to={routes.academics()}><button className={style.noBgButton}>Back</button></Link>
+                    <Link to={routes.upload()}><SignUpFooter>
+                        <Link to={routes.style()}><button className={style.noBgButton}>Back</button></Link>
                     </SignUpFooter></Link>
                 </section> :
                 <section className={style.signUp}>
                     <SignUpHeader />
                     <main className={style.main}>
-                        <h3 className={style.heading}>Student Registration | Preferences</h3>
+                        <h3 className={style.heading}>Tutor Registration</h3>
                         {/* {props[0].title} */}
                         <RegisterNav />
                         <div className={style.formBox}>
@@ -247,32 +383,41 @@ export const PreferencesForm = () => {
                                 <p>Choose whether you prefer online or in-person tutoring and specify your availability for sessions.
                                     You can also mention any additional preferences or requirements you have for the tutoring sessions.</p>
                             </div>
-                            <form action="" className={style.form}>
-                                <CustomInput onChange={handleInput} name='availabilty' type="select" placeholder="Weekdays, Weekends, Mornings, Afternoons, Evenings" label={"Availability:"}>
-                                    {/* <option value="Multiselect tags">Multiselect tags</option> */}
-                                    <option value="Weekdays">Weekdays</option>
-                                    <option value="Weekends">Weekends</option>
-                                    <option value="Mornings">Mornings</option>
-                                    <option value="Afternoons">Afternoons</option>
-                                    <option value="Evenings">Evenings</option>
-                                </CustomInput>
-                                <CustomInput onChange={handleInput} name='others' type="text" placeholder="Specify any additional preferences or requirements" label={"Additional Preferences/Requirements:"} />
-                                <CustomInput onChange={handleInput} name='lang' type="select" placeholder="Enter your preferred language" label={"Communication Language:"}>
-                                    <option value="English">English</option>
-                                    <option value="Others">Others</option>
-                                </CustomInput>
-                            </form>
+                            <div>
+                                <form action="" className={style.form}>
+                                    <CustomInput onChange={handleInput} name='availabilty' type="select" placeholder="Weekdays, Weekends, Mornings, Afternoons, Evenings" label={"Preferred Subjects:"}>
+                                        <option value="Select specific subjects within your expertise that you will be tutoring">Select specific subjects within your expertise that you will be tutoring</option>
+                                        <option value="Weekdays">Weekdays</option>
+                                        <option value="Weekends">Weekends</option>
+                                        <option value="Mornings">Mornings</option>
+                                        <option value="Afternoons">Afternoons</option>
+                                        <option value="Evenings">Evenings</option>
+                                    </CustomInput>
+
+                                    <CustomInput onChange={handleInput} name='lang' type="select" placeholder="" label={"Student Assessment Approach:"}>
+                                        <option value="quizzes, tests, projects, or other methods.">quizzes, tests, projects, or other methods.</option>
+                                        <option value="quizzes">quizzes</option>
+                                        <option value="tests">tests</option>
+                                        <option value="projects">projectss</option>
+                                        <option value="other methods">other methods</option>
+                                    </CustomInput>
+                                    <CustomInput onChange={handleInput} name='others' type="text" placeholder="Specify if you are available for additional support outside of scheduled tutoring sessions" label={"Availability for Additional Support:"} />
+                                </form>
+                                <div>
+
+                                </div>
+                            </div>
                         </div>
                     </main>
-                    <Link to={routes.goals()}><SignUpFooter>
-                        <Link to={routes.academics()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
+                    <Link to={routes.upload()}><SignUpFooter>
+                        <Link to={routes.style()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
                     </SignUpFooter></Link>
                 </section>}
         </>
     )
 }
 
-export const GoalsForm = () => {
+export const Upload = () => {
     const mobileSideBar = useMediaQuery('(max-width: 530px)')
     const [input, setInput] = React.useState({
         username: '',
@@ -283,49 +428,53 @@ export const GoalsForm = () => {
         // e.persist()
         setInput({ ...input, [e.target.name]: e.target.value })
     }
+
     return (
         <>
             {mobileSideBar.includes(true) ?
                 <section className={style.login}>
-                    <MobileOnboardingLayout>STUDENT REGISTRATION | LEARNING GOALS</MobileOnboardingLayout>
+                    <MobileOnboardingLayout>Tutor Registration</MobileOnboardingLayout>
                     <main className={style.main}>
                         <div className={style.formBox}>
                             <div className={style.formInfo}>
-                                <p>Describe any challenges and short-term goals you want to achieve. Outline your long-term goals.
+                                <p>Describe any short-term goals or challenges you're facing and outline your long-term goals or career aspirations.
                                     This information will help us tailor the tutoring experience to meet your needs.</p>
                             </div>
-                            <form action="" className={combinedClasses(style.form, style.textareaForm)}>
-                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Enter your short term goal" label={"Short-term Goals:"} className={style.textarea} />
-                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Enter your long term goal" label={"Long-term Goals:"} className={style.textarea} />
-                                {/* <textarea name="" id="">hello</textarea> */}
+                            <div>
+                                <form action="" className={style.form}>
+                                    
+                                </form>
+                                <div>
 
-                            </form>
+                                </div>
+                            </div>
                         </div>
                     </main>
-                    <Link to={routes.terms()}><SignUpFooter>
-                        <Link to={routes.preferences()}><button className={style.noBgButton}>Back</button></Link>
+                    <Link to={routes.tutorTerms()}><SignUpFooter>
+                        <Link to={routes.tutorPreferences()}><button className={style.noBgButton}>Back</button></Link>
                     </SignUpFooter></Link>
                 </section> :
                 <section className={style.signUp}>
                     <SignUpHeader />
                     <main className={style.main}>
-                        <h3 className={style.heading}>Student Registration | Learning Goals</h3>
+                        <h3 className={style.heading}>Tutor Registration</h3>
                         {/* {props[0].title} */}
                         <RegisterNav />
                         <div className={style.formBox}>
                             <div className={style.formInfo}>
-                                <p>Describe any challenges and short-term goals you want to achieve. Outline your long-term goals.
-                                    This information will help us tailor the tutoring experience to meet your needs.</p>
+                                <p>Choose whether you prefer online or in-person tutoring and specify your availability for sessions.
+                                    You can also mention any additional preferences or requirements you have for the tutoring sessions.</p>
                             </div>
-                            <form action="" className={combinedClasses(style.form, style.textareaForm)}>
-                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Enter your short term goal" label={"Short-term Goals:"} className={style.textarea} />
-                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Enter your long term goal" label={"Long-term Goals:"} className={style.textarea} />
-                                {/* <textarea name="" id="">hello</textarea> */}
+                            <div>
+                                <form action="" className={style.form}>
+                                    </form>
+                                <div>
 
-                            </form>
+                                </div>
+                            </div>
                         </div>
                     </main>
-                    <Link to={routes.terms()}><SignUpFooter>
+                    <Link to={routes.tutorTerms()}><SignUpFooter>
                         <Link to={routes.preferences()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
                     </SignUpFooter></Link>
                 </section>}
@@ -333,13 +482,14 @@ export const GoalsForm = () => {
     )
 }
 
+
 export const Terms = () => {
     const mobileSideBar = useMediaQuery('(max-width: 530px)')
     return (
         <>
             {mobileSideBar.includes(true) ?
                 <section className={style.login}>
-                    <MobileOnboardingLayout>TERMS AND CONDITIONS</MobileOnboardingLayout>
+                    <MobileOnboardingLayout>Tutor Registration</MobileOnboardingLayout>
                     <main className={style.main}>
                         <div className={style.formBox}>
                             <div className={combinedClasses(style.formInfo, style.termsInfo)}>
@@ -369,14 +519,14 @@ export const Terms = () => {
                             </div>
                         </div>
                     </main>
-                    <Link to={routes.confirmEmail()}><SignUpFooter>
+                    <Link to={routes.confirmEmail()}><SignUpFooter title='I agree'>
                         <Link to={routes.goals()}><button className={style.noBgButton}>Back</button></Link>
                     </SignUpFooter></Link>
                 </section> :
                 <section className={style.signUp}>
                     <SignUpHeader />
                     <main className={style.main}>
-                        <h3 className={style.heading}>Student Registration</h3>
+                        <h3 className={style.heading}>Tutor Registration</h3>
                         {/* {props[0].title} */}
                         <RegisterNav />
                         <div className={style.formBox}>
@@ -404,7 +554,7 @@ export const Terms = () => {
                             </div>
                         </div>
                     </main>
-                    <Link to={routes.confirmEmail()}><SignUpFooter>
+                    <Link to={routes.confirmEmail()}><SignUpFooter title='I agree' >
                         <Link to={routes.goals()}><button className={style.noBgButton}>Resend Confirmation Email</button></Link>
                     </SignUpFooter></Link>
                 </section>}
@@ -423,7 +573,7 @@ export const ConfirmEmail = () => {
                     <MobileOnboardingLayout>EMAIL VERIFICATION</MobileOnboardingLayout>
                     <main className={style.main}>
                         {mobileSideBar.includes(false) ? <h3 className={style.heading}>Check Your Email to Confirm Your Account</h3> : ''}
-                        <div className={mobileSideBar.includes(true) ? combinedClasses(style.mobileformbox, style.formBox): style.formBox}>
+                        <div className={mobileSideBar.includes(true) ? combinedClasses(style.mobileformbox, style.formBox) : style.formBox}>
                             <div className={style.formInfo}>
                                 <h3 className={style.termTitle}>Instructions</h3>
                                 <p>An email has been sent to your email address.</p>
@@ -468,7 +618,7 @@ export const EmailComfirmed = () => {
                     <MobileOnboardingLayout>STUDENT REGISTRATION</MobileOnboardingLayout>
                     <main className={style.main}>
                         {mobileSideBar.includes(false) ? <h3 className={style.heading}>Student Registration</h3> : ''}
-                        <div className={mobileSideBar.includes(true) ? combinedClasses(style.mobileformbox, style.formBox): style.formBox}>
+                        <div className={mobileSideBar.includes(true) ? combinedClasses(style.mobileformbox, style.formBox) : style.formBox}>
                             <div className={style.formInfo}>
                                 <h3 className={style.termTitle}>Congratulations!</h3>
                                 <p>Your email has been successfully confirmed. You can now access your account.</p>
@@ -487,7 +637,7 @@ export const EmailComfirmed = () => {
                             <div className={style.formInfo}>
                                 <h3 className={style.termTitle}>Congratulations!</h3>
                                 <p>Your email has been successfully confirmed. You can</p>
-                                   <p>now access your account.</p>
+                                <p>now access your account.</p>
                             </div>
                         </div>
                     </main>
@@ -509,7 +659,7 @@ export const SignUpHeader = () => {
 }
 export const RegisterNav = () => {
     return <ul>
-        {registerNavs.map((nav, index) =>
+        {tutorNavs.map((nav, index) =>
             <li>
                 <NavLink to={nav.url} className={style.list}>{nav.title}</NavLink>
                 {/* {index && <hr className={style.line}/>} */}

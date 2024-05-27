@@ -8,3 +8,13 @@ export const registerNavs=[
     {title: 'Terms & Conditions', url: routes.terms()}
 
 ]
+
+export const tutorNavs=[
+    {title: 'Personal Information', url: routes.tutorPersonalInfo()},
+    {title: 'Educational Experience', url: routes.tutorAcademics()},
+    {title: 'Teaching Style & Approach', url: routes.style()},
+    {title: 'Availability & Preferences', url: routes.tutorPreferences()},
+    {title: 'Upload Documents', url: routes.upload()},
+    {title: 'Terms & Conditions', url: routes.terms()}
+
+]

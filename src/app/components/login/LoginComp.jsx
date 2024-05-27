@@ -10,8 +10,35 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import { routes } from '../../utilities/routes';
+import { MobileOnboardingLayout } from '../layout';
+import { useMediaQuery } from '@chakra-ui/react'
 
 export const LoginComp = () => {
+    const mobileSideBar = useMediaQuery('(max-width: 530px)')
+    return (
+        <>
+            {mobileSideBar.includes(true) ?
+                <section className={style.login}>
+                    <MobileOnboardingLayout>LOGIN YOUR ACCOUNT</MobileOnboardingLayout>
+                    <LoginForm/>
+                </section> :
+                <section className={style.login}>
+                    <div className={style.loginDiv1}>
+                        <Logo className={style.logo} />
+                        <StudentPic className={style.studentPic} />
+                    </div>
+                    <div className={style.loginDiv2}>
+                        <h3>LOGIN YOUR ACCOUNT</h3>
+                        <LoginForm/>
+                    </div>
+                </section>}
+        </>
+    )
+}
+
+export const LoginForm = () => {
+    
+    // mobileSideBar.includes(true) ? console.log('hello') : console.log ('hi')
     const [search, setSearch] = useState("")
     // const [rememberMe, setRemeberMe] = useState(false)
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -92,51 +119,42 @@ export const LoginComp = () => {
     //     }
     // }, [])
     return (
-        <section className={style.login}>
-            <div className={style.loginDiv1}>
-                <Logo className={style.logo} />
-                <StudentPic />
+        <form action="" className={style.form}>
+            <div className={style.forError}>
+                {error ?
+                    <div className={style.errorDiv}>
+                        <CustomInput onChange={handleInput} name='username' type="email" placeholder="Enter your email address" label={"Username:"} />
+                        <ErrorIcon className={style.errorIcon} />
+                    </div> :
+                    <CustomInput onChange={handleInput} name='username' type="email" placeholder="Enter your email address" label={"Username:"} />
+                }
+                {error && <p className={style.error}>wrong username</p>}
             </div>
-            <div className={style.loginDiv2}>
-                <h3>LOGIN YOUR ACCOUNT</h3>
-                <form action="" className={style.form}>
-                    <div className={style.forError}>
-                        {error ?
-                            <div className={style.errorDiv}>
-                                <CustomInput onChange={handleInput} name='username' type="email" placeholder="Enter your email address" label={"Username:"} />
-                                <ErrorIcon  className={style.errorIcon}/>
-                            </div> :
-                            <CustomInput onChange={handleInput} name='username' type="email" placeholder="Enter your email address" label={"Username:"} />
-                        }
-                        {error && <p className={style.error}>wrong username</p>}
-                    </div>
-                    <div className={style.forError}>
-                        {error ?
-                            <div className={style.errorDiv}>
-                                <CustomInput onChange={handleInput} name='password' type="password" placeholder="Enter your password" label={"Password:"} />
-                                <ErrorIcon className={style.errorIcon}/>
-                            </div> :
+            <div className={style.forError}>
+                {error ?
+                    <div className={style.errorDiv}>
+                        <CustomInput onChange={handleInput} name='password' type="password" placeholder="Enter your password" label={"Password:"} />
+                        <ErrorIcon className={style.errorIcon} />
+                    </div> :
 
-                            <CustomInput onChange={handleInput} name='password' type="password" placeholder="Enter your password" label={"Password:"} className={style.passwordDiv} />}
-                        {error && <p className={style.error}>wrong password</p>}
-                    </div>
-                    <div>
-                        <div className={style.buttons}>
-                            <button type='submit' className={style.loginButton} onClick={handleLogin} disabled={isSubmitting}>Login</button>
-                            <Link to={routes.personalInfo()}><button className={style.registerButton}>Register &nbsp; <RiArrowDownSFill /></button></Link>
-                        </div>
-                        <p className={style.forgetp}>Forgot your password?</p>
-                    </div>
-                    <div className={style.otherAuth}>
-                        <p>Sign in with</p>
-                        <div>
-                            <Link ><FaFacebook className={style.facebook} /></Link>
-                            <Link ><FcGoogle className={style.google} /></Link>
-                            <Link ><FaLinkedin className={style.linkedin} /></Link>
-                        </div>
-                    </div>
-                </form>
+                    <CustomInput onChange={handleInput} name='password' type="password" placeholder="Enter your password" label={"Password:"} className={style.passwordDiv} />}
+                {error && <p className={style.error}>wrong password</p>}
             </div>
-        </section>
+            <div>
+                <div className={style.buttons}>
+                    <button type='submit' className={style.loginButton} onClick={handleLogin} disabled={isSubmitting}>Login</button>
+                    <Link to={routes.personalInfo()}><button className={style.registerButton}>Register &nbsp; <RiArrowDownSFill /></button></Link>
+                </div>
+                <p className={style.forgetp}>Forgot your password?</p>
+            </div>
+            <div className={style.otherAuth}>
+                <p>Sign in with</p>
+                <div>
+                    <Link ><FaFacebook className={style.facebook} /></Link>
+                    <Link ><FcGoogle className={style.google} /></Link>
+                    <Link ><FaLinkedin className={style.linkedin} /></Link>
+                </div>
+            </div>
+        </form>
     )
 }
