@@ -1,0 +1,271 @@
+/* .dashboard{
+    min-height: 100%;
+    background: red;
+} */
+.dashboardMain {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.main {
+    padding: 3% 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+.main li {
+    list-style: none;
+}
+
+.main>h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.main h3,
+.main>div {
+    display: flex;
+    width: 100%;
+    /* flex-direction: column; */
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 4%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.overviewRow1 {
+    border-top: 1px solid #969696;
+    border-bottom: 1px solid #969696;
+}
+
+.overviewHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overviewHeading>h6 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+
+.overviewHeading>button {
+    color: #09BCFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.main ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 37px;
+    padding: 16px 0 16px 16px;
+
+}
+
+.border {
+    border-bottom: 1px solid var(--multiselect);
+    border-top: 1px solid var(--multiselect);
+}
+
+/* .upcomingClasses ul{
+margin-top: 20px;
+
+gap: 20px;
+} */
+.upcomingClasses li>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.upcomingClasses li {
+    align-items: flex-end !important;
+}
+
+.upcomingClasses li>p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+
+.upcomingClasses li>button {
+    background: var(--multiselect);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+
+.course {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.date {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+}
+
+.assignment li>div {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.assignment li>div .course {
+    color: #272835;
+}
+
+.assignment li>div .date {
+    color: #9E9E9E;
+}
+
+.overviewRow2 .overviewHeading {
+    margin-bottom: 10px;
+}
+
+.overviewRow2 li>div {
+    gap: 16px;
+}
+
+.tutors li .tutor {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.tutors li>button {
+    background: #D4F8D3;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #222222;
+}
+
+.tutors li>div>div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.messages li>div>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.messages li {
+    font-family: "Jost", sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.messages li>div .initial {
+    background: #F0F7FF;
+    border-radius: 8px;
+    color: #0052B4;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36.47px;
+    height: 36px;
+}
+
+.messages li>div>div .name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #333333;
+}
+
+.messages li>div>div .message,
+.messages li>p {
+    color: #8A8A8A;
+    font-weight: 400;
+    font-size: 10px;
+}
+.attendance li{
+    flex-direction: column !important;
+    gap: 10px !important;
+
+}
+.attendance ul li>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+}
+
+.attendance ul li>div .course {
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+
+.attendance ul li>div .mark {
+    font-weight: 400;
+    font-size: 14px;
+    color: #8A8A8A;
+}
+
+/* .progress .wrapper{
+    background: red;
+    width: 100%;
+} */
+.progress,
+.progress>div {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress .container {
+    background: #DAD7FE;
+    height: 8px;
+    
+    
+}
+
+.progress .container>div {
+    background: #1F70B2 !important;
+}
+
+/* .progress .barCompleted {
+    background-color: #1F70B2;
+    height: 8px;
+  } */

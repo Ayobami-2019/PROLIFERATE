@@ -8,6 +8,8 @@ import { Login } from './components/login/index.jsx';
 // import { SignUp } from './components/signup/index.jsx';
 import { AcademicsForm, ConfirmEmail, EmailComfirmed, GoalsForm, InfoForm, PreferencesForm, Terms } from './components/signup/signUpComp.jsx';
 import { Form1, Form2, Form3, Form4, Form5, TeachingStyleForm, Upload, } from './components/signup/TutorSignUp.jsx';
+import { Overview } from './components/dashboard/Overview.jsx';
+import { ProgressDashboard } from './components/dashboard/Progress.jsx';
 
 const router = createBrowserRouter([
   {
@@ -79,9 +81,22 @@ const router = createBrowserRouter([
     element: <Upload/>
   },
   {
+    path: routes.dashboard(),
+    element: <Overview/>
+  },
+  {
+    path: routes.overview(),
+    element: <Overview/>
+  },
+  {
+    path: routes.progress(),
+    element: <ProgressDashboard/>
+  },
+  {
     path: '*',
     element: <h1>404</h1>
-  }
+  },
+  
 ])
 function App() {
   // const [info, setInfo] = React.useState({})

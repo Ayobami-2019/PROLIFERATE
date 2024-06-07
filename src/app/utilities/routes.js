@@ -1,3 +1,5 @@
+import { Dashboard } from "../components/dashboard"
+
 export const routes={
     login() { 
         return '/login'
@@ -52,5 +54,18 @@ export const routes={
     },
     upload(){
         return '/tutorSignUp/uploadDocuments'
+    },
+    dashboard(){
+        return '/dashboard'
+    },
+    overview(){
+        return '/dashboard/overview'
+    },
+    progress(){
+        return '/dashboard/progress'
+    },
+    notification(){
+        return '/dashboard/notification'
     }
+
 }

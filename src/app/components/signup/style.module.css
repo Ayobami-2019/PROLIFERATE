@@ -13,14 +13,14 @@
     align-items: center;
 }
 
-.main ul {
+.main>ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     /* border: ; */
 }
 
-.main ul li {
+.main>ul>li {
     border: 1px solid #C9C9C9;
     width: 143px;
     height: 53px;
@@ -34,7 +34,7 @@
     padding: 10px;
     text-align: center;
 }
-.main ul li a.active {
+.main>ul>li>a.active {
     background: #1F70B2;
     border: 1px solid#DE4B18;
     color: #ffffff;
@@ -42,11 +42,11 @@
     border-top-right-radius: 5px;
 }
 
-.main ul li hr {
+.main>ul>li>hr {
     color: #000000;
 }
 
-.main ul li .list {
+.main>ul>li>.list {
     display: flex;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -60,14 +60,14 @@
 }
 
 
-main ul li {
+main>ul>li {
     /* text-decoration: underline; */
     position: relative;
     z-index: 1;
     cursor: pointer;
 }
 
-.main ul li hr {
+.main>ul>li>hr {
     position: absolute;
     top: 45px;
     width: 145px;
@@ -141,14 +141,8 @@ main ul li {
     flex-direction: column;
     flex-wrap: wrap;
     width: 90%;
-    /* padding-bottom: 60px; */
-    gap: 10px;
-    /* place-items: center; */
-
-    /* background-color: blue; */
+    gap: 30px;
     height: 280px;
-    /* padding-left: 50px; */
-    /* padding-right: 50px; */
 
 }
 
@@ -222,10 +216,110 @@ main ul li {
 } */
 .textarea {
     /* height: 100px; */
-    max-width: 831px !important;
+    max-width: 831px;
     width: 100%;
 }
+.textarea2{
+    max-width: 400px;
+    width: 100%;
+}
+.formBox2{
+    height: fit-content;
+    width: 90%;
+    display: flex;
+}
+.formBox2 .formDate{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    width: 90%;
+    gap: 30px;
+    height: fit-content;
+}
+.formDate .form{
+    height: fit-content;
+    width: 100%;
+}
+.uploadList{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+}
+.uploadList li{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.document{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+.document h6{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+.formDocuments{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.uploaded{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+}
+.container {
+    margin: 'auto';
+    background-color: #09BCFF !important;
+    border-radius: 6px;
+    /* width: 400; */
 
+}
+.container:focus, .container:active{
+    background-color: #09BCFF !important;
+}
+.input{
+    display: none;
+}
+.container label>span{
+    background-color: #09BCFF !important;
+    border-radius: 6px;
+    /* width: 100%; */
+    
+}
+/* .container label>span:focus, .container label>span:active{
+    background-color: #09BCFF;
+} */
+.container label>span>span{
+    padding: 10px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+span.MuiButton-label{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.MuiButton-label{
+    width: 182px;
+    
+}
 @media (max-width:530px) {
 
     .formBox,

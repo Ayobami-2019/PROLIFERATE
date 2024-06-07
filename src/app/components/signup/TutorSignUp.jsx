@@ -3,7 +3,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { ReactComponent as Logo } from '../../assets/images/logo.svg';
-import { ReactComponent as StudentPic } from '../../assets/images/student.svg';
+import { ReactComponent as File } from '../../assets/icon/file.svg';
 import style from './style.module.css'
 import { CustomInput } from '../input';
 import { RiAsterisk } from "react-icons/ri";
@@ -13,10 +13,17 @@ import { Link } from 'react-router-dom';
 import { routes } from '../../utilities/routes';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { registerNavs, tutorNavs } from './data';
+import { registerNavs, tutorNavs, uploadList } from './data';
 import { combinedClasses } from '../../utilities/format';
 import { useMediaQuery } from '@chakra-ui/react';
 import { MobileOnboardingLayout } from '../layout';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import IconButton from '@material-ui/core/IconButton';
+import { UploadComponent } from '../upload';
+import { useRef } from 'react';
+import Button from '@material-ui/core/Button';
+import { FaArrowUpFromBracket } from "react-icons/fa6";
+
 
 
 export const Form1 = () => {
@@ -93,7 +100,7 @@ export const InfoForm = () => {
 
                             <form action="" className={style.form}>
                                 <CustomInput onChange={handleInput} name='firstName' type="text" placeholder="First Name" label={"First Name:"} important={true} required />
-                                <CustomInput onChange={handleInput} name='contact' type="text" placeholder="contact" label={"Contact Number:"} important={true} required />
+                                <CustomInput onChange={handleInput} name='contact' type="text" placeholder="contact" label={"Contact Number:"} important={true} />
                                 <CustomInput onChange={handleInput} name='lastName' type="text" placeholder="Last Name" label={"Last Name:"} important={true} required />
 
                                 <CustomInput onChange={handleInput} name='age' type="number" placeholder="Enter your age" label={"Age:"} />
@@ -266,14 +273,14 @@ export const TeachingStyleForm = () => {
                                     <option value="Hands-on">Hands-on</option>
                                     <option value="Customized">Customized</option>
                                 </CustomInput>
-                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Describe your approach to tutoring and how you engage with students" label={"Approach to Tutoring:"} className={style.textarea} />
+                                <CustomInput onChange={handleInput} name='username' type="textarea" placeholder="Describe your approach to tutoring and how you engage with students" label={"Approach to Tutoring:"} className={style.textarea2} />
                                 <CustomInput onChange={handleInput} name='attendance' type="select" placeholder="Multiselect tags" label={"Attendance Type:"}>
                                     <option value="onsite, hybrid, online">onsite, hybrid, online</option>
                                     <option value="Male">Onsite </option>
                                     <option value="Hybrid">Hybrid</option>
                                     <option value="Online">Online</option>
                                 </CustomInput>
-                            
+
                             </form>
                         </div>
                     </main>
@@ -307,7 +314,7 @@ export const TeachingStyleForm = () => {
                                     <option value="Hybrid">Hybrid</option>
                                     <option value="Online">Online</option>
                                 </CustomInput>
-                            
+
                             </form>
                         </div>
                     </main>
@@ -337,12 +344,12 @@ export const PreferencesForm = () => {
                 <section className={style.login}>
                     <MobileOnboardingLayout>Tutor Registration</MobileOnboardingLayout>
                     <main className={style.main}>
-                        <div className={style.formBox}>
+                        <div className={combinedClasses(style.formBox, style.formBox2)}>
                             <div className={style.formInfo}>
                                 <p>Describe any short-term goals or challenges you're facing and outline your long-term goals or career aspirations.
                                     This information will help us tailor the tutoring experience to meet your needs.</p>
                             </div>
-                            <div>
+                            <div className={style.formDate}>
                                 <form action="" className={style.form}>
                                     <CustomInput onChange={handleInput} name='availabilty' type="select" placeholder="Weekdays, Weekends, Mornings, Afternoons, Evenings" label={"Preferred Subjects:"}>
                                         <option value="Select specific subjects within your expertise that you will be tutoring">Select specific subjects within your expertise that you will be tutoring</option>
@@ -363,7 +370,7 @@ export const PreferencesForm = () => {
                                     <CustomInput onChange={handleInput} name='others' type="text" placeholder="Specify if you are available for additional support outside of scheduled tutoring sessions" label={"Availability for Additional Support:"} />
                                 </form>
                                 <div>
-
+                                    hello
                                 </div>
                             </div>
                         </div>
@@ -378,12 +385,12 @@ export const PreferencesForm = () => {
                         <h3 className={style.heading}>Tutor Registration</h3>
                         {/* {props[0].title} */}
                         <RegisterNav />
-                        <div className={style.formBox}>
+                        <div className={combinedClasses(style.formBox, style.formBox2)}>
                             <div className={style.formInfo}>
                                 <p>Choose whether you prefer online or in-person tutoring and specify your availability for sessions.
                                     You can also mention any additional preferences or requirements you have for the tutoring sessions.</p>
                             </div>
-                            <div>
+                            <div className={style.formDate}>
                                 <form action="" className={style.form}>
                                     <CustomInput onChange={handleInput} name='availabilty' type="select" placeholder="Weekdays, Weekends, Mornings, Afternoons, Evenings" label={"Preferred Subjects:"}>
                                         <option value="Select specific subjects within your expertise that you will be tutoring">Select specific subjects within your expertise that you will be tutoring</option>
@@ -404,7 +411,7 @@ export const PreferencesForm = () => {
                                     <CustomInput onChange={handleInput} name='others' type="text" placeholder="Specify if you are available for additional support outside of scheduled tutoring sessions" label={"Availability for Additional Support:"} />
                                 </form>
                                 <div>
-
+                                    hello
                                 </div>
                             </div>
                         </div>
@@ -418,17 +425,46 @@ export const PreferencesForm = () => {
 }
 
 export const Upload = () => {
+    const [files, setFiles] = useState([]);
+    const [uploadedFiles, setUploadedFiles] = useState([]);
+    const [error, setError] = useState();
+    const inputRef = useRef();
+
+    const [selectedFile, setSelectedFile] = React.useState([false])
+
     const mobileSideBar = useMediaQuery('(max-width: 530px)')
-    const [input, setInput] = React.useState({
-        username: '',
-        password: '',
-        checkbox: false
-    })
-    const handleInput = (e) => {
-        // e.persist()
-        setInput({ ...input, [e.target.name]: e.target.value })
+
+    function handleMultipleChange(event) {
+        event.preventDefault()
+        setFiles([...event.target.files]);
+        setSelectedFile([files])
     }
 
+    function handleMultipleSubmit(event) {
+        event.preventDefault()
+        inputRef.current.click([])
+        files.forEach((file, index) => {
+            
+            document.getElementById('uploadedDocuments').append(`file${index}`, file);
+                // document.append(formData)
+            });
+        // event.preventDefault();
+    }
+
+
+    // if (files) return (
+    //     <div>
+    //         <ul>
+    //             {Array.from(files).map((file, index) =>
+    //                 <li key={index}>{file.name}</li>
+    //             )}
+    //         </ul>
+    //         <div>
+    //             <button onClick={setSelectedFile(null)}>Cancel</button>
+    //             <button onClick={handleUpload}>Upload</button>
+    //         </div>
+    //     </div>
+    // )
     return (
         <>
             {mobileSideBar.includes(true) ?
@@ -441,12 +477,46 @@ export const Upload = () => {
                                     This information will help us tailor the tutoring experience to meet your needs.</p>
                             </div>
                             <div>
-                                <form action="" className={style.form}>
-                                    
-                                </form>
-                                <div>
+                                <ul className={style.uploadList}>
+                                    {uploadList.map((nav) =>
+                                        <li>{nav.title}</li>
+                                    )}
 
-                                </div>
+                                </ul>
+                                <form action="" className={style.form}>
+                                    <div className={style.formDocuments}>
+                                        <div className={style.uploaded}>
+                                            <File />
+                                            <p>Educational Supporting Documents</p>
+                                        </div>
+                                        <div className={style.container}>
+                                            <input type="file" accept=".pdf" id="contained-button-file" className={style.input} onChange={handleMultipleChange} ref={inputRef} multiple/>
+                                            <label htmlFor="contained-button-file">
+                                                <Button variant="contained" color="primary" component="span" type='submit' className={style.para} onClick={handleMultipleSubmit} multiple>
+                                                    <FaArrowUpFromBracket /> Upload Document
+                                                </Button>
+                                                {/* {uploadedFileURL && <img src={uploadedFileURL} alt="Uploaded content" />} */}
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div id='uploadedDocuments'>
+                                        {/* {selectedFile && */}
+                                        {files &&
+                                            <ul>
+                                                {Array.from(files).map((file, index) =>
+                                                    <li key={index}>{file.name}</li>
+                                                )}
+                                            </ul>
+                                        }
+                                    </div>
+                                </form>
+                                {/* {selectedFile && 
+                                <div>{uploadedFile}
+                                
+                                </div>} */}
+
+
                             </div>
                         </div>
                     </main>
@@ -465,17 +535,46 @@ export const Upload = () => {
                                 <p>Choose whether you prefer online or in-person tutoring and specify your availability for sessions.
                                     You can also mention any additional preferences or requirements you have for the tutoring sessions.</p>
                             </div>
-                            <div>
-                                <form action="" className={style.form}>
-                                    </form>
-                                <div>
+                            <div className={style.document}>
+                                <h6>List of Documents to upload</h6>
+                                <ul className={style.uploadList}>
+                                    {uploadList.map((nav) =>
+                                        <li>{nav.title}</li>
+                                    )}
 
-                                </div>
+                                </ul>
+                                <form action="" className={style.form}>
+                                    <div className={style.formDocuments}>
+                                        <div className={style.uploaded}>
+                                            <File />
+                                            <p>Educational Supporting Documents</p>
+                                        </div>
+                                        <div className={style.container}>
+                                            <input type="file" accept=".pdf" id="contained-button-file" className={style.input} onChange={handleMultipleChange} ref={inputRef}  multiple/>
+                                            <label htmlFor="contained-button-file">
+                                                <Button variant="contained" color="primary" component="span" type='submit' className={style.para} onClick={handleMultipleSubmit}>
+                                                    <FaArrowUpFromBracket /> Upload Document
+                                                </Button>
+                                                {/* {uploadedFileURL && <img src={uploadedFileURL} alt="Uploaded content" />} */}
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div id='uploadedDocuments'>
+                                        {files &&
+                                            <ul>
+                                                {Array.from(files).map((file, index) =>
+                                                    <li key={index}>{file.name}</li>
+                                                )}
+                                            </ul>
+                                        }
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </main>
                     <Link to={routes.tutorTerms()}><SignUpFooter>
-                        <Link to={routes.preferences()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
+                        <Link to={routes.tutorPreferences()}><button className={style.noBgButton}>Return to Previous Location</button></Link>
                     </SignUpFooter></Link>
                 </section>}
         </>

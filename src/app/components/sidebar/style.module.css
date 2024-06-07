@@ -1,0 +1,83 @@
+.sideBar{
+    /* background-image: linear-gradient(to bottom, #1b87e1e0, #0C2E4A); */
+    background: rgb(27,135,224);
+background: linear-gradient(180deg, rgba(27,135,224,1) 0%, rgba(13,52,86,1) 97%, rgba(12,46,74,1) 100%);
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100%; */
+}
+.navContainer{
+    margin-top: 30px;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.navBar, .navBardiv{
+    display: flex;
+    flex-direction: row;
+}
+.navBar{
+    gap: 25px;
+    padding: 5px 0;
+    padding-left: 20px;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255, 0.17);
+    /* width: 100%; */
+    /* background: red; */
+    
+}
+.navBardiv{
+    gap: 15px;
+    align-items: center;
+    /* justify-content: center; */
+    /* background: black; */
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.navText{
+    justify-content: center;
+    
+}
+
+.subtitle{
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 0;
+    
+}
+.subtitle a{
+    background: #1d8eedc7;
+    border: 1px solid rgb(255, 255, 255, 0.17);
+    width: 100%;
+    padding: 5px 0;
+}
+.sidebar .active{
+    background: #1F70B2;
+}
+.refer{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.refer button{
+    color: #ffffff;
+    background: var(--button-hover);
+    padding: 16px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}

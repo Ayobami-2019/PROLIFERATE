@@ -30,14 +30,14 @@ export const CustomInput = ({ ...props }) => {
             {/* <div className={style.labelInput}> */}
                 <div className={style.labelDiv}>
                     <label className={style.nobg}>{label} </label>
-                    {props.required ? <RiAsterisk /> : ''}
+                    {props.required ? <RiAsterisk className={style.important}/> : ''}
                 </div>
                 {/* {type == "select"&&<select {...props} value={value}>{props.children}</select> || 
                     type=="input" &&<input {...props} type={type} required={required} className={newClass} /> ||
                     type=="textarea" &&<textarea {...props} name="" id="" className={newClass}></textarea>
                     } */}
-                <div className={style.inputFieldDiv}>
-                    {type == 'textarea' ? <textarea {...props} name="" id="" className={newClass}></textarea> :
+                <div className={type=='textarea' ? combinedClasses(style.textareadiv) :style.inputFieldDiv}>
+                    {type == 'textarea' ? <textarea {...props} type={type} className={newClass}></textarea> :
                         type == "select" ?
                             <select {...props} value={value}>{props.children}</select> :
                             <input {...props} type={type} required={required} className={newClass} />}
@@ -96,7 +96,7 @@ export const Search = (...props) => {
         <div className={style.searchDiv}>
             {/* , style.searchField */}
             <div className={combinedClasses(style.inputFieldDiv, style.searchField)}>
-                <input {...props} type="search" name="search" placeholder="Search for Available Medicines" className={style.search} onChange={(e) => setSearchField(e.target.value)} />
+                <input {...props} type="search" name="search" placeholder="Search" className={style.search} onChange={(e) => setSearchField(e.target.value)} />
                 <div className={combinedClasses(style.icon, style.searchIcon)}>
                     <IoSearchOutline />
                 </div>

@@ -15,6 +15,13 @@ export const tutorNavs=[
     {title: 'Teaching Style & Approach', url: routes.style()},
     {title: 'Availability & Preferences', url: routes.tutorPreferences()},
     {title: 'Upload Documents', url: routes.upload()},
-    {title: 'Terms & Conditions', url: routes.terms()}
+    {title: 'Terms & Conditions', url: routes.tutorTerms()}
 
+]
+
+export const uploadList=[
+    {title: 'Educational Certificates'},
+    {title: 'Resume or Curriculum Vitae (CV)'},
+    {title: 'Professional Development Certificates'},
+    {title: 'Identification Documents and others'}
 ]

@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 17px 34px 5px #0000001a;
+    padding: 15px 30px;
+}
+.logo{
+    height: 58.77px;
+    width: 259px;
+    cursor: pointer;
+}
+.header ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+.header ul li{
+    cursor: pointer;
+}
+.lastIndex{
+    height: 32.72px;
+    width: 53px;
+    position: relative;
+}
+.lastIndex svg{
+    position: absolute;
+    left: -35px;
+    top: -18px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+}

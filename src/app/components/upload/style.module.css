@@ -1,0 +1,46 @@
+.container {
+    margin: 'auto';
+    background-color: #09BCFF !important;
+    /* width: 400; */
+
+}
+.container:focus, .container:active{
+    background-color: #09BCFF !important;
+}
+.input{
+    display: none;
+}
+.container label>span{
+    background-color: #09BCFF !important;
+    border-radius: 6px;
+    /* width: 100%; */
+    
+}
+/* .container label>span:focus, .container label>span:active{
+    background-color: #09BCFF;
+} */
+.container label>span>span{
+    padding: 10px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+span.MuiButton-label{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.MuiButton-containedPrimary{
+    background: none;
+}
+.para{
+    width: 182px;
+}

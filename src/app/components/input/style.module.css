@@ -18,20 +18,23 @@
 .textarea {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
 }
 /* .textarea div label{
 } */
 .textarea .inputFieldDiv{
     width: 100%;
-    max-width: 861px;
+    background: red;
 }
+
 /* .textarea div{
     width: fit-content;
 } */
-.labelInput>div>svg{
+.important{
     stroke: #FF0000;
     fill: #FF0000;
+    height: 10px;
+    width: 10px;
 }
 .nobg{
     background: none;
@@ -66,9 +69,9 @@
 
 .inputFieldDiv{
     width: 100%;
-    max-width: 368px;
+    max-width: fit-content;
 }
-.inputFieldDiv input, .inputFieldDiv select, .inputFieldDiv textarea{
+.inputFieldDiv input, .inputFieldDiv select, .textareadiv textarea{
     border: 1px solid #CCCCCC;
     /* box-shadow: 0 0 0 1px #878787; */
     width: 100%;
@@ -79,6 +82,17 @@
     background: #FFFFFF;
     font-weight: 400;
     font-style: 14px;
+}
+.textarea {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+}
+/* .textarea div label{
+} */
+.textarea .textareaDiv{
+    /* width: 100%;
+    background: red; */
 }
 .inputFieldDiv input, .inputFieldDiv select{
     
@@ -91,6 +105,18 @@
 .inputFieldDiv input:focus, .inputFieldDiv select:focus{
     border: 1.5px solid #30407F;
     outline: none;
+}
+.searchField input{
+    padding-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid #D0D5DD;
+    border-radius: 50px;
+}
+.searchField svg{
+    width: 16px;
+    height: 16px;
 }
 /* .searchField{
     
@@ -158,6 +184,12 @@
     margin-top: 7px;
     cursor: pointer;
     
+}
+.searchIcon{
+    left: 10px;
+    height: 100%;
+    bottom: 0;
+    /* background: red; */
 }
 @media (max-width:530px) {
     label{
