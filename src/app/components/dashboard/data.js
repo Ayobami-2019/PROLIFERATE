@@ -37,3 +37,28 @@ export const attendance=[
     {course: 'English', mark: 20},
     {course: 'French', mark: 45},
 ]
+
+export const progress=[
+    {course: 'Math test', date: 'Monday, 23 April', time: '3:30 PM - 6:00 PM', upcoming: 'Upcoming'},
+    {course: 'English monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Science monthly testt', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'French monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Math monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', fail: 'Fail'},
+    {course: 'English monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'ICT monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Math test', date: 'Monday, 23 April', time: '3:30 PM - 6:00 PM', upcoming: 'Upcoming'},
+    {course: 'English monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Science monthly testt', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'French monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Math monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', fail: 'Fail'},
+    {course: 'English monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'ICT monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Math test', date: 'Monday, 23 April', time: '3:30 PM - 6:00 PM', upcoming: 'Upcoming'},
+    {course: 'English monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Science monthly testt', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'French monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'Math monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', fail: 'Fail'},
+    {course: 'English monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    {course: 'ICT monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
+    
+]
