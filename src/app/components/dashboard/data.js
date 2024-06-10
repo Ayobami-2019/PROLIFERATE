@@ -1,9 +1,14 @@
 
 import {ReactComponent as TutorPic } from "../../assets/icon/tutorpic.svg";
-
 import {ReactComponent as Course1 } from "../../assets/icon/course1.svg";
 import {ReactComponent as Course2 } from "../../assets/icon/course2.svg";
 import {ReactComponent as Course3 } from "../../assets/icon/course3.svg";
+import {ReactComponent as Not1 } from "../../assets/icon/not1.svg";
+import {ReactComponent as  Not2 } from "../../assets/icon/not2.svg";
+import {ReactComponent as Not3 } from "../../assets/icon/not3.svg";
+import {ReactComponent as Not4 } from "../../assets/icon/not4.svg";
+import {ReactComponent as  Not5 } from "../../assets/icon/not5.svg";
+import {ReactComponent as Not6 } from "../../assets/icon/not6.svg";
 
 export const upcomingClasses=[
     {icon: <Course1/>, course: 'Mathematics', date: 'Monday, April 10th', time: '3:00PM - 4:30 PM', daysLeft: '10days'},
@@ -61,4 +66,13 @@ export const progress=[
     {course: 'English monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
     {course: 'ICT monthly test', date: 'Monday, 23 April', mark: '90/100', attempted: '98/100', correct: '90', wrong: '8', time: '3:30 PM - 6:00 PM', pass: 'Pass'},
     
+]
+
+export const notification=[
+    {icon: <Not1/>, message: 'Ms. Sandra went an assignment', time: '45 mins ago'},
+    {icon: <Not2/>, message: 'A new assignment has been posted for your science class. You are required to research and submit a paper on "Climate Change and Its Effects" by the due date.' , time: '45 mins ago'},
+    {icon: <Not3/>, message: 'A new assignment has been posted for your science class. You are required to research and submit a paper on "Climate Change and Its Effects" by the due date.', time: '45 mins ago'},
+    {icon: <Not4/>, message: 'A new assignment has been posted for your science class. You are required to research and submit a paper on "Climate Change and Its Effects" by the due date.', time: '45 mins ago'},
+    {icon: <Not5/>, message: 'A new assignment has been posted for your science class. You are required to research and submit a paper on "Climate Change and Its Effects" by the due date.', time: '45 mins ago'},
+    {icon: <Not6/>, message: 'A new assignment has been posted for your science class. You are required to research and submit a paper on "Climate Change and Its Effects" by the due date.', time: '45 mins ago'},
 ]

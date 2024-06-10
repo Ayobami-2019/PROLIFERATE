@@ -10,6 +10,7 @@ import { AcademicsForm, ConfirmEmail, EmailComfirmed, GoalsForm, InfoForm, Prefe
 import { Form1, Form2, Form3, Form4, Form5, TeachingStyleForm, Upload, } from './components/signup/TutorSignUp.jsx';
 import { Overview } from './components/dashboard/Overview.jsx';
 import { ProgressDashboard } from './components/dashboard/Progress.jsx';
+import { NotificationDashboard } from './components/dashboard/Notification.jsx';
 
 const router = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ const router = createBrowserRouter([
   {
     path: routes.progress(),
     element: <ProgressDashboard/>
+  },
+  {
+    path: routes.notification(),
+    element: <NotificationDashboard/>
   },
   {
     path: '*',

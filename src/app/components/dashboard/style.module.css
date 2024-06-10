@@ -24,6 +24,7 @@
 .main>h3 {
     font-size: 32px;
     font-weight: 700;
+    border-bottom: 1px solid #969696;
 }
 
 .main h3,
@@ -33,7 +34,7 @@
     /* flex-direction: column; */
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 4%;
+    padding: 20px 4%;
 }
 
 .row {
@@ -357,6 +358,18 @@ gap: 20px;
     background: rgb(47, 215, 74, 0.3);
     border: 1px solid #2FD74A;
     color: #2FD74A;
+}
+.notificationList{
+    padding: 2%;
+}
+.notificationList li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 33px;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
 /* .progress .barCompleted {
     background-color: #1F70B2;
