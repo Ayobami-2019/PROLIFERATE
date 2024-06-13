@@ -218,11 +218,13 @@ gap: 20px;
     font-weight: 400;
     font-size: 10px;
 }
-.attendance li{
+
+.attendance li {
     flex-direction: column !important;
     gap: 10px !important;
 
 }
+
 .attendance ul li>div {
     display: flex;
     flex-direction: row;
@@ -258,28 +260,31 @@ gap: 20px;
 .progress .container {
     background: #DAD7FE;
     height: 8px;
-    
-    
+
+
 }
 
 .progress .container>div {
     background: #1F70B2 !important;
 }
+
 /* .tableDiv{
     padding: 0 4%;
 } */
-.tablePagination{
+.tablePagination {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.tablePagination ul{
+
+.tablePagination ul {
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding-right: 4%;
 }
-.tablePagination ul li{
+
+.tablePagination ul li {
     padding: 5px 15px;
     border-radius: 10px;
     border: 0.5px solid rgb(255, 255, 255, 0.3);
@@ -287,51 +292,61 @@ gap: 20px;
     box-shadow: -2px -2px 5px 0 rgb(255, 255, 255, 0.5);
     background: rgb(255, 255, 255, 0.15);
 }
-.progressTable{
-    
+
+.progressTable {
+
     border-radius: 10px;
     box-shadow: 0 0 4px 0 rgb(0, 0, 0, 0.25);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     width: 90.5%;
-    padding:30px;
+    padding: 30px;
     margin-left: 4%;
     border-collapse: separate;
 }
+
 /* .progressTable thead, .progressTable tbody{
     padding-left: 4%;
     padding-right: 4%;
 } */
-.progressTable thead th{
+.progressTable thead th {
     color: #757575;
     font-size: 14px;
     /* background: red; */
     text-align: start;
 }
-.center{
+
+.center {
     text-align: center !important;
 }
-.progressTable .test{
+
+.progressTable .test {
     font-size: 16px;
 }
-.dateTime{
+
+.dateTime {
     font-size: 12px;
     color: #757575;
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
-.progressTable tbody tr td{
+
+.progressTable tbody tr td {
     border-bottom: 1px solid #E0E0E0;
     position: relative;
     padding-top: 20px;
     padding-bottom: 10px;
 }
-.noborder td{
+
+.noborder td {
     border-bottom: none !important;
-    
+
 }
-.upcoming, .pass, .fail{
+
+.upcoming,
+.pass,
+.fail {
     padding: 4px 23px;
     border-radius: 10px;
     height: fit-content;
@@ -342,27 +357,32 @@ gap: 20px;
     display: flex;
     justify-self: center !important;
     align-self: center !important;
-    
+
 }
-.upcoming{
+
+.upcoming {
     background: rgb(201, 44, 109, 0.3);
     border: 1px solid #C92C6D;
     color: #C92C6D;
 }
-.fail{
+
+.fail {
     background: rgba(241, 71, 71, 0.3);
     border: 1px solid #F14747;
     color: #F14747;
 }
-.pass{
+
+.pass {
     background: rgb(47, 215, 74, 0.3);
     border: 1px solid #2FD74A;
     color: #2FD74A;
 }
-.notificationList{
+
+.notificationList {
     padding: 2%;
 }
-.notificationList li{
+
+.notificationList li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -371,7 +391,288 @@ gap: 20px;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
-/* .progress .barCompleted {
-    background-color: #1F70B2;
-    height: 8px;
-  } */
+
+.refer {
+    display: flex;
+    flex-direction: column !important;
+    gap: 50px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.refer>p, .feedbackSection {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.refer form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.refer button,
+.classes .tableHead button, .reschedule>button {
+    background: var(--button-hover);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    width: fit-content;
+}
+
+.refer>div>h6 {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.refer>div>p {
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 733px;
+}
+
+.classes {
+    flex-direction: column !important;
+    gap: 20px;
+
+}
+
+.classesTable {
+    border-collapse: collapse;
+}
+
+/* .classesTable tr{
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+} */
+.classesTable td,
+.classesTable th {
+    border: 1px solid var(--brown);
+    text-align: left;
+    padding-left: 4%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.classesTable td {
+    font-weight: 400;
+}
+
+.classesTable th {
+    font-weight: 700;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.classes .tableHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blueColor {
+    color: var(--button-hover);
+    cursor: pointer;
+}
+
+.referMain {
+    position: relative;
+}
+
+.referFeedback {
+    font-family: "IBM Plex Sans", sans-serif;
+    background: #FFFFFF;
+    padding: 40px;
+    box-shadow: 0 8px 30px 0 rgb(0, 0, 0, 0.12);
+    border-radius: 16px;
+    flex-direction: column !important;
+    gap: 44px;
+    max-width: 600px !important;
+    position: absolute;
+    /* align-self: center; */
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+.referFeedback h5 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.referFeedback p {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.referFeedback button {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #1F1F1F;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #000000;
+    padding: 16px 58px;
+}
+.referMain:disabled{
+    background: #D9D9D9;
+}
+.referFeedback .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.upcomingAlert{
+    max-width: 500px !important;
+}
+.referFeedback .buttons .button2{
+    background: var(--button-hover);
+    color: #ffffff;
+    border: none;
+}
+.button2{
+    background: var(--button-hover);
+    color: #ffffff;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 8px 9px;
+}
+.reschedule{
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px;
+    position: relative;
+    /* padding-right: 3% !important; */
+}
+.reschedule button{
+    position: absolute;
+    bottom: 0;
+    right: 3%;
+}
+.calendarHead{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* ga */
+}
+/* .calendar{
+    background: red;
+} */
+.calendar>div{
+    display: flex;
+    flex-direction: row;
+}
+.feedbackSection{
+    display: flex;
+    flex-direction: column !important;
+    gap: 30px !important;
+    color: #000000;
+    width: fit-content;
+}
+.feedbackSection h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.feedbackSection>div{
+    display: flex;
+    flex-direction: column ;
+    gap: 20px;
+}
+.feedbackSection>div>div{
+    display: flex;
+    flex-direction: row;
+    gap: 50px
+}
+.feedbackSection>div>div>p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+
+}
+.feedbackSection>div>div>form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.feedbackSection>div>div>form svg path{
+    stroke: var(--brown);
+}
+.feedbackSection .button2{
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    bottom: -70px;
+}
+.textarea, .textarea2{
+    min-height: 150px;
+}
+.imageUpload{
+    background: #EDF2F6;
+    border-radius: 11.09px;
+    border: 0.62px dashed #4C535F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #4C535F;
+    padding: 25.61px;
+    gap: 10px;
+    width: fit-content;
+}
+.imageUpload p{
+    width: 100px;
+    text-align: center;
+}
+.settingsDashboard{
+    display: flex;
+    flex-direction: column !important;
+    gap: 30px;
+}
+.settingsDashboard ul{
+    display: flex;
+    flex-direction: row;
+    gap: 7.39px;
+}
+.settingsDashboard ul li{
+    font-family: 'Open Sans', sans-serif;
+    padding: 7.39px;
+    color: #717B8C;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1.23px solid #E0E4EC;
+}
+.textarea2 {
+    /* height: 100px; */
+    max-width: 831px;
+    width: 100%;
+}
+.settingsDashboard form>div>div input, .settingsDashboard form>div>div textarea{
+    background: #E0E4EC;
+    border: 0.62px solid #E0E4EC;
+}
+.inputsDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    /* height: 250px; */
+    flex-wrap: wrap;
+}
+.settingsDashboard form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

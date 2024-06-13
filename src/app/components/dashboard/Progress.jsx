@@ -36,6 +36,7 @@ export const ProgressTable = () => {
     const previousPage = () => {
         if (currentPage !== 1) {
             setCurrentPage(currentPage - 1)
+            // document.querySelector('')
         }
     }
     const nextPage = () => {

@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { sideBarNav } from "./data";
 import { ReactComponent as RightArrow } from "../../assets/icon/rightArrow.svg";
 import { ReactComponent as SidePic } from "../../assets/images/sidePic.svg";
+import { routes } from '../../utilities/routes';
 
 
 
@@ -82,7 +83,7 @@ export const SideBarDiv = (props) => {
             <div className={style.navContainer}>
                 {sideBarNav.map((nav, index) =>
                     <div className='sideNav'>
-                        <NavLink to={nav.url} className={combinedClasses(style.navBar, 'bluebglink')} onClick={navDropDown}>
+                        <NavLink key={index} to={nav.url} className={combinedClasses(style.navBar, 'bluebglink')} onClick={index ? navDropDown : ''} >
                             <div className={nav.icon ? style.navBardiv : combinedClasses(style.navText, style.navBardiv)} >
                                 {nav.icon}
                                 <div className={style.navTitle}>
@@ -91,16 +92,16 @@ export const SideBarDiv = (props) => {
                                 </div>
                             </div>
                             {nav.icon && <RightArrow />}
-                            <div onClick={() => navDropDown(index)}>
+                            <div>
                                 {/* {index == dropDown ? <RightArrow/> : nav.dropDown} */}
                             </div>
 
                         </NavLink>
                         {
                             nav.subtitle && dropDown &&
-                            <div className={combinedClasses(style.navBardiv, style.subtitle, 'navDiv')}>
+                            <div className={combinedClasses(style.navBardiv, style.subtitle, 'navDiv')} key={index}>
                                 {nav.subtitle.map((subData) =>
-                                
+
                                     <NavLink to={subData.url} className={combinedClasses(style.subdata, 'bluebglink')}>{subData.title}</NavLink>
                                 )}
                             </div>
@@ -109,7 +110,9 @@ export const SideBarDiv = (props) => {
             </div>
             <div className={style.refer}>
                 <SidePic />
-                <button>Refer and Earn</button>
+                <button>
+                    <Link to={routes.refer()}>Refer and Earn</Link>
+                </button>
             </div>
         </div>
     )

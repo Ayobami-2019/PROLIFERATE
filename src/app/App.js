@@ -11,6 +11,12 @@ import { Form1, Form2, Form3, Form4, Form5, TeachingStyleForm, Upload, } from '.
 import { Overview } from './components/dashboard/Overview.jsx';
 import { ProgressDashboard } from './components/dashboard/Progress.jsx';
 import { NotificationDashboard } from './components/dashboard/Notification.jsx';
+import { ReferDashboard } from './components/dashboard/Refer.jsx';
+import { Classes } from './components/dashboard/Classes.jsx';
+import { UpcomingDashboard } from './components/dashboard/Upcoming.jsx';
+import { Reschedule } from './components/dashboard/Reschedule.jsx';
+import { Feedback } from './components/dashboard/Feedback.jsx';
+import { SettingsDashboard } from './components/dashboard/Settings.jsx';
 
 const router = createBrowserRouter([
   {
@@ -97,6 +103,38 @@ const router = createBrowserRouter([
     path: routes.notification(),
     element: <NotificationDashboard/>
   },
+  {
+    path: routes.refer(),
+    element: <ReferDashboard/>
+  },
+  {
+    path: routes.classes(),
+    element: <Classes/>
+  },
+  {
+    path: routes.upcoming(),
+    element: <UpcomingDashboard/>
+  },
+  {
+    path: routes.reschedule(),
+    element: <Reschedule/>
+  },
+  {
+    path: routes.feedback(),
+    element: <Feedback/>
+  },
+  {
+    path: routes.profileSettings(),
+    element: <SettingsDashboard/>
+  },
+  // {
+  //   path: routes.loginSettings(),
+  //   element: <Feedback/>
+  // },
+  // {
+  //   path: routes.summary(),
+  //   element: <Feedback/>
+  // },
   {
     path: '*',
     element: <h1>404</h1>

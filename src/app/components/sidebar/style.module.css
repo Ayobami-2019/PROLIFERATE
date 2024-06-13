@@ -70,6 +70,7 @@ background: linear-gradient(180deg, rgba(27,135,224,1) 0%, rgba(13,52,86,1) 97%,
     position: relative;
     align-items: center;
 }
+
 .refer button{
     color: #ffffff;
     background: var(--button-hover);
@@ -81,3 +82,4 @@ background: linear-gradient(180deg, rgba(27,135,224,1) 0%, rgba(13,52,86,1) 97%,
     font-weight: 400;
     font-size: 16px;
 }
+

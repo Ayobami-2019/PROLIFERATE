@@ -66,6 +66,29 @@ export const routes={
     },
     notification(){
         return '/dashboard/notification'
+    },
+    refer(){
+        return '/refer'
+    },
+    classes(){
+        return '/classes/schedule'
+    },
+    upcoming(){
+        return '/classes/upcomingClasses'
+    },
+    reschedule(){
+        return '/classes/reschedule'
+    },
+    feedback(){
+        return '/feedback'
+    },
+    profileSettings(){
+        return '/settings/profileSettings'
+    },
+    loginSettings(){
+        return '/settings/loginSettings'
+    },
+    summary(){
+        return '/settings/summary'
     }
-
 }
