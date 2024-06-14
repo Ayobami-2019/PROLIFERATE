@@ -17,6 +17,7 @@ import { UpcomingDashboard } from './components/dashboard/Upcoming.jsx';
 import { Reschedule } from './components/dashboard/Reschedule.jsx';
 import { Feedback } from './components/dashboard/Feedback.jsx';
 import { SettingsDashboard } from './components/dashboard/Settings.jsx';
+import { LoginSettings } from './components/dashboard/LoginSettings.jsx';
 
 const router = createBrowserRouter([
   {
@@ -127,10 +128,10 @@ const router = createBrowserRouter([
     path: routes.profileSettings(),
     element: <SettingsDashboard/>
   },
-  // {
-  //   path: routes.loginSettings(),
-  //   element: <Feedback/>
-  // },
+  {
+    path: routes.loginSettings(),
+    element: <LoginSettings/>
+  },
   // {
   //   path: routes.summary(),
   //   element: <Feedback/>

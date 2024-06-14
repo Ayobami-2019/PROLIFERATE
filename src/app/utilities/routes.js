@@ -90,5 +90,15 @@ export const routes={
     },
     summary(){
         return '/settings/summary'
+    },
+    assignmentDashboard(){
+        return '/assignments'
+    },
+    tutorDashboard(){
+        return '/tutors'
+    },
+    messageDashboard(){
+        return '/messages'
     }
+
 }

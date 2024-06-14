@@ -35,6 +35,21 @@ const newRoutes = {
     },
     feedback(){
         return '/feedback'
+    },
+    profileSettings(){
+        return '/settings/profileSettings'
+    },
+    assignmentDashboard(){
+        return '/assignments'
+    },
+    tutorDashboard(){
+        return '/tutors'
+    },
+    messageDashboard(){
+        return '/messages'
+    },
+    paymentDashboard(){
+        return '/payments'
     }
 
 
@@ -44,7 +59,7 @@ const newRoutes = {
 export const sideBarNav = [
     //{icon: <GoHome/>, title: '', url: ''},
     {
-        icon: <Home />, title: 'Dashboard', url: '',
+        icon: <Home />, title: 'Dashboard', url: newRoutes.overview(),
         subtitle: [
             { title: 'Overview', url: newRoutes.overview() },
             { title: 'Progress Tracker', url: newRoutes.progress() },
@@ -52,18 +67,18 @@ export const sideBarNav = [
         ]
     },
     {
-        icon: <Studies />, title: 'Class', url: '',
+        icon: <Studies />, title: 'Class', url: newRoutes.classes(),
         subtitle: [
             { title: 'My Classes', url: newRoutes.classes() },
             { title: 'Upcoming Clases', url: newRoutes.upcoming() },
             { title: 'Reschedule', url: newRoutes.reschedule() }
         ]
     },
-    { icon: <Assignment />, title: 'Assignments', url: '' },
-    { icon: <Tutor />, title: 'Tutor', url: '' },
-    { icon: <Message />, title: 'Messaging', url: '' },
-    { icon: <Earnings />, title: 'Payment', url: '' },
+    { icon: <Assignment />, title: 'Assignments', url: newRoutes.assignmentDashboard() },
+    { icon: <Tutor />, title: 'Tutor', url: newRoutes.tutorDashboard() },
+    { icon: <Message />, title: 'Messaging', url: newRoutes.messageDashboard },
+    { icon: <Earnings />, title: 'Payment', url: newRoutes.paymentDashboard() },
     { icon: <Feedback />, title: 'Feedback', url: newRoutes.feedback() },
-    { icon: < Settings />, title: 'Settings', url: routes.profileSettings() },
+    { icon: < Settings />, title: 'Settings', url: newRoutes.profileSettings() },
     { icon: <LogoutIcon />, title: 'Logout', url: '' }
 ]

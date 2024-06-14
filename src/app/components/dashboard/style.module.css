@@ -286,11 +286,11 @@ gap: 20px;
 
 .tablePagination ul li {
     padding: 5px 15px;
-    border-radius: 10px;
+    /* border-radius: 10px;
     border: 0.5px solid rgb(255, 255, 255, 0.3);
     box-shadow: 2px 2px 4px 0 #54BAB9;
     box-shadow: -2px -2px 5px 0 rgb(255, 255, 255, 0.5);
-    background: rgb(255, 255, 255, 0.15);
+    background: rgb(255, 255, 255, 0.15); */
 }
 
 .progressTable {
@@ -675,4 +675,101 @@ gap: 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+.loginSettings{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    font-family: 'Poppins', sans-serif;
+    width: 85%;
+
+}
+.loginSettings>div>h5{
+    font-weight: 600;
+    font-size: 20px;
+}
+.twoFactor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.twoFactor>p{
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 700px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.switch{
+    position: relative;
+}
+.switchP{
+    font-weight: 500;
+    font-size: 14px;
+    position: absolute;
+    left: 15%;
+    color: #ffffff;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    
+}
+.loginSettings .row2{
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+.loginSettings .row2 .row2heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.25);
+    padding: 15px 0;
+}
+.loginSettings .row2 h6{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.separate h6{
+    font-weight: 600;
+    font-size: 14px;
+    /* color: rgb(0, 0, 0, 0.5); */
+    cursor: pointer;
+}
+/* .separate h6:active, .separate h6:{
+    color: #000000;
+} */
+.loginSettings .row2 .row2heading button{
+    padding: 4px 10px;
+    border-radius: 5px;
+    background: #186BAD;
+    box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.25);
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+}
+.separate, .separate>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.separate{
+    gap: 100px;
+}
+.separate>div{
+    gap: 20px;
+}
+.separate>div>div>p, .separate .message{
+    color: rgb(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-size: 14px;
+}
+.separate .message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
 }

@@ -54,3 +54,38 @@ main ul li a.active{
   background: none;
   border: none;
 }
+.page-item-num a.active{
+  border-radius: 10px;
+  padding: 5px 15px;
+  /* background: red; */
+    border: 0.5px solid rgb(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 4px 0 rgb(84, 186, 185), -2px -2px 5px 0 rgb(255, 255, 255, 0.5), 1px 1px 4px 0 rgb(255, 255, 255, 0.50);
+    /* box-shadow: -2px -2px 5px 0 rgb(255, 255, 255, 0.5); */
+    background: rgb(255, 255, 255, 0.15);
+    color: #000000;
+}
+label .css-p27qcy{
+  width: 89px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  
+}
+.css-p27qcy[aria-checked=true], .css-p27qcy[data-checked] {
+  --switch-bg: var(--light-blue);
+}
+label .css-7roig {
+  width: 35px;
+  height: 28px;
+  /* background: red; */
+}
+.css-ghot30 {
+  --switch-track-width: 65px;
+}
+.css-12sjb1l {
+  width: fit-content !important;
+}
+.css-12sjb1l .css-16xaqf9{
+  display: none;
+}
+

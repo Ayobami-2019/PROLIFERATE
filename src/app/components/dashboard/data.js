@@ -9,7 +9,18 @@ import {ReactComponent as Not3 } from "../../assets/icon/not3.svg";
 import {ReactComponent as Not4 } from "../../assets/icon/not4.svg";
 import {ReactComponent as  Not5 } from "../../assets/icon/not5.svg";
 import {ReactComponent as Not6 } from "../../assets/icon/not6.svg";
-import { routes } from "../../utilities/routes";
+
+const newRoutes={
+    profileSettings(){
+        return '/settings/profileSettings'
+    },
+    loginSettings(){
+        return '/settings/loginSettings'
+    },
+    summary(){
+        return '/settings/summary'
+    }
+}
 
 export const upcomingClasses=[
     {icon: <Course1/>, course: 'Mathematics', date: 'Monday, April 10th', time: '3:00PM - 4:30 PM', daysLeft: '10days'},
@@ -105,7 +116,7 @@ export const schedule=[
 ]
 
 export const settings=[
-    {title: 'Account Settings', url: routes.profileSettings()},
-    {title: 'Login & Security', url: routes.loginSettings()},
-    {title: 'Profile Summary', url: routes.summary()},
+    {title: 'Account Settings', url: newRoutes.profileSettings()},
+    {title: 'Login & Security', url: newRoutes.loginSettings()},
+    {title: 'Profile Summary', url: newRoutes.summary()},
 ]

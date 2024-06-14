@@ -26,6 +26,7 @@ export const ProgressDashboard = () => {
 
 export const ProgressTable = () => {
     const [currentPage, setCurrentPage] = React.useState(1);
+    const [newBg, setNewBg]=React.useState(false)
     const recordsPerPage = 7;
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
@@ -36,18 +37,23 @@ export const ProgressTable = () => {
     const previousPage = () => {
         if (currentPage !== 1) {
             setCurrentPage(currentPage - 1)
-            // document.querySelector('')
+            
         }
     }
     const nextPage = () => {
         if (currentPage !== pagesNumber) {
             setCurrentPage(currentPage + 1)
+            
         }
     }
     const changePage = (id) => {
         setCurrentPage(id)
+        // const getClass=document.querySelector('#bg')
+        //     const newClass= getClass.classList.add('newClass')
+            
     }
-
+    console.log(currentPage)
+// currentPage===true ? console.log(false) : console.log(true)
     return (
         <section className={style.tableDiv}>
             <div className={style.tablePagination}>
@@ -57,8 +63,8 @@ export const ProgressTable = () => {
                         <a class="page-link" href="#" ><MdOutlineKeyboardDoubleArrowLeft onClick={previousPage} /></a>
                     </li>
                     {numbers.map((number, index) =>
-                        <li class="page-item" key={index}>
-                            <a class="page-link" href="#" onClick={() => changePage(number)}>{number}</a>
+                        <li class="page-item-num" key={index} id='bg'>
+                            <NavLink className={currentPage ? 'active' : ''} href="#" onClick={() => changePage(number)}>{number}</NavLink>
                         </li>
                     )}
                     {/* <li class="page-item active">

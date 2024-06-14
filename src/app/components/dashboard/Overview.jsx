@@ -6,6 +6,8 @@ import { ReactComponent as DashboardAss } from "../../assets/icon/dashboardass.s
 import { combinedClasses } from '../../utilities/format';
 import { Progress } from '@chakra-ui/react'
 import ProgressBar from "@ramonak/react-progress-bar";
+import { Link } from 'react-router-dom';
+import { routes } from '../../utilities/routes';
 
 
 export const Overview = () => {
@@ -17,7 +19,9 @@ export const Overview = () => {
                     <div className={style.upcomingClasses}>
                         <div className={style.overviewHeading}>
                             <h6>Upcoming Classes</h6>
-                            <button>See all</button>
+                            <button>
+                                <Link to={routes.upcoming()}> See all</Link>
+                                </button>
                         </div>
                         <ul>
                             {upcomingClasses.map((upcoming, index) =>
@@ -36,7 +40,9 @@ export const Overview = () => {
                     <div className={style.assignment}>
                         <div className={style.overviewHeading}>
                             <h6>Assignments</h6>
-                            <button>See all</button>
+                            <button>
+                            <Link to={routes.assignmentDashboard()}> See all</Link>
+                                </button>
                         </div>
                         <ul>
                             {assignments.map((assignment, index) =>
@@ -57,7 +63,9 @@ export const Overview = () => {
                     <div className={style.tutors}>
                         <div className={style.overviewHeading}>
                             <h6>My Tutors</h6>
-                            <button>See All</button>
+                            <button>
+                            <Link to={routes.tutorDashboard()}> See all</Link>
+                                </button>
                         </div>
                         <ul>
                             {tutors.map((tutor) =>
@@ -81,7 +89,9 @@ export const Overview = () => {
                     <div className={style.messages}>
                         <div className={style.overviewHeading}>
                             <h6>Messages</h6>
-                            <button>See all</button>
+                            <button>
+                            <Link to={routes.messageDashboard()}> See all</Link>
+                                </button>
                         </div>
                         <ul>
                             {messages.map((message) =>
