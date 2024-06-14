@@ -50,6 +50,9 @@ const newRoutes = {
     },
     paymentDashboard(){
         return '/payments'
+    },
+    addDashboard(){
+        return '/classes/add'
     }
 
 
@@ -71,7 +74,7 @@ export const sideBarNav = [
         subtitle: [
             { title: 'My Classes', url: newRoutes.classes() },
             { title: 'Upcoming Clases', url: newRoutes.upcoming() },
-            { title: 'Reschedule', url: newRoutes.reschedule() }
+            { title: 'Add New', url: newRoutes.addDashboard() }
         ]
     },
     { icon: <Assignment />, title: 'Assignments', url: newRoutes.assignmentDashboard() },

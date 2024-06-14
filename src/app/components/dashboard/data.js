@@ -9,7 +9,16 @@ import {ReactComponent as Not3 } from "../../assets/icon/not3.svg";
 import {ReactComponent as Not4 } from "../../assets/icon/not4.svg";
 import {ReactComponent as  Not5 } from "../../assets/icon/not5.svg";
 import {ReactComponent as Not6 } from "../../assets/icon/not6.svg";
-
+import {ReactComponent as Tutor1} from "../../assets/images/tutor1.svg";
+import {ReactComponent as Tutor2 } from "../../assets/images/tutor2.svg";
+import {ReactComponent as Tutor3 } from "../../assets/images/tutor3.svg";
+import {ReactComponent as Tutor4 } from "../../assets/images/tutor4.svg";
+import {ReactComponent as Tutor5 } from "../../assets/images/tutor5.svg";
+import {ReactComponent as Tutor6 } from "../../assets/images/tutor6.svg";
+import {ReactComponent as Tutor7 } from "../../assets/images/tutor7.svg";
+import {ReactComponent as Tutor8 } from "../../assets/images/tutor8.svg";
+import {ReactComponent as Tutor9 } from "../../assets/images/tutor9.svg";
+import {ReactComponent as Tutor10 } from "../../assets/images/tutor10.svg";
 const newRoutes={
     profileSettings(){
         return '/settings/profileSettings'
@@ -34,14 +43,55 @@ export const assignments=[
     {course: 'Science | Biological Benefits', date: '04 May, 09:20AM'},
 ]
 
-export const tutors=[
+export const tutors2=[
     {icon: <TutorPic/>, name: 'Guy Hawkins', status: 'Active'},
     {icon: <TutorPic/>, name: 'Guy Hawkins', status: 'Active'},
     {icon: <TutorPic/>, name: 'Guy Hawkins', status: 'Active'},
     {icon: <TutorPic/>, name: 'Guy Hawkins', status: 'Active'},
     {icon: <TutorPic/>, name: 'Guy Hawkins', status: 'Active'}
 ]
-
+export const tutors=[
+    {icon: <Tutor1/>, name: 'Sandra Gladys', course: 'History', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+},
+    {icon: <Tutor2/>, name: 'Sandra Gladys', course: 'Mathematics', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor3/>, name: 'Henry Arsene', course: 'History', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor4/>, name: 'Sandra Gladys', course: 'Mathematics', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor5/>, name: 'Sandra Gladys', course: 'History', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor6/>, name: 'Sandra Gladys', course: 'Mathematics', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor7/>, name: 'Sandra Gladys', course: 'History', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor8/>, name: 'Sandra Gladys', course: 'History', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor9/>, name: 'Sandra Gladys', course: 'Mathematics', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+    {icon: <Tutor10/>, name: 'Sandra Gladys', course: 'History', qualification: "Bachelor's Degree in Mathematics, 5+ years tutoring experience", style: "Interactive and engaging, focused on problem-solving and critical thinking", 
+    availabilty: 'Evenings (Mon/Wed/Fri), Weekends (Sat/Sun)', rating: '4.8/5', 
+    bio: "Hi, I'm Henry Arsene, and I'm passionate about helping students to excel in mathematics. With a strong background in the subject and years of tutoring experience, I strive to make learning enjoyable and rewarding for my students. whether you need help with algebra, geometry, or calculus, I'm heare to guide you every step of the way. Let's work together to achieve your academic goals!"
+    },
+]
 export const messages=[
     {icon: <Course1/>, name: 'Adepoju Ademola', message: 'Hello, Mr John  i am yet to get your class b res...', time: '10:25 am'},
     {icon: <Course2/>, name: 'Badiru Pomile', message: 'Please schedule your class test.', time: '12:35 pm'},
@@ -119,4 +169,9 @@ export const settings=[
     {title: 'Account Settings', url: newRoutes.profileSettings()},
     {title: 'Login & Security', url: newRoutes.loginSettings()},
     {title: 'Profile Summary', url: newRoutes.summary()},
+]
+
+export const courses=['Mathematics', 'English Language Arts (ELA)', 'Science', 'Social Studies', 'History', 'Geography', 'Physical Education (PE)',
+'Art', 'Music', 'Foreign Languages (e.g., Spanish, French)', 'Computer Science', 'Health Education', 'Civics', 'Economics', 'Literature', 'Environmental Studies',
+'Technology Education', 'Religious Studies (depending on the curriculum)', 'Drama', 'Career and Technical Education (CTE)'
 ]

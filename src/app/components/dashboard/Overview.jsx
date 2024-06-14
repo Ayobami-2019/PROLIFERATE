@@ -1,5 +1,5 @@
 import { Dashboard } from '.'
-import { assignments, attendance, messages, tutors, upcomingClasses } from './data'
+import { assignments, attendance, messages, tutors2, upcomingClasses } from './data'
 import style from './style.module.css'
 import { ReactComponent as Time } from "../../assets/icon/time.svg";
 import { ReactComponent as DashboardAss } from "../../assets/icon/dashboardass.svg";
@@ -68,7 +68,7 @@ export const Overview = () => {
                                 </button>
                         </div>
                         <ul>
-                            {tutors.map((tutor) =>
+                            {tutors2.map((tutor) =>
                                 <li className={style.border}>
                                     <div className={style.row}>
                                         <input

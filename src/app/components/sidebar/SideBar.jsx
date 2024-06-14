@@ -56,7 +56,7 @@ export const SideBarDiv = (props) => {
                 {sideBarNav.map((nav, index) =>
 
                     <div className='sideNav' key={index} >
-                        <NavLink to={nav.url} className={combinedClasses(style.navBar, 'bluebglink')} key={index}>
+                        <NavLink to={nav.url} className={combinedClasses(style.navBar, 'bluebglink')} key={index} onClick={()=>navDropDown(index)}>
 
                             <div className={nav.icon ? style.navBardiv : combinedClasses(style.navText, style.navBardiv)} >
                                 {nav.icon}

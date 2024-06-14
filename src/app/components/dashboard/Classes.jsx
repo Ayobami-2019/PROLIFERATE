@@ -2,6 +2,7 @@ import style from './style.module.css';
 import { Dashboard } from '.';
 import { classes } from './data';
 import {ReactComponent as Star } from "../../assets/icon/star.svg";
+import { MyRating } from '../rating';
 
 export const Classes = () => {
 
@@ -25,7 +26,7 @@ export const Classes = () => {
                                     <td>{data.tutor}</td>
                                     <td >{data.schedule}</td>
                                     <td><div className={style.rating}>
-                                        <Star/> <Star/><Star/><Star/><Star/>
+                                        <MyRating/>
                                         </div></td>
                                     </tr>
                             )}

@@ -1,0 +1,28 @@
+.fill, .nofill{
+    padding: 16px 8px;
+    border-radius: 10px;
+    gap: 15px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 24px;
+  }
+  .fill{
+    border: none;
+    outline: none;
+    
+    border-radius: 15px;
+    background: #186BAD;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    
+  }
+  .nofill{
+    border: 1px solid #000000;
+    background: #F2F1F1;
+    color: var(--button-hover);
+  }
+  

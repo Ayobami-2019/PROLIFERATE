@@ -29,7 +29,7 @@ code {
   --button-hover: #186bad;
   --opacity-white: rgb(255, 255, 255, 0.95);
   --multiselect: #E9E7E7;
-  
+  --accent: #D9734C;  
 }
 h3,h6,h1,h2,h4,h5,p{
   margin: 0;
@@ -80,7 +80,7 @@ label .css-7roig {
   /* background: red; */
 }
 .css-ghot30 {
-  --switch-track-width: 65px;
+  --switch-track-width: 65px !important;
 }
 .css-12sjb1l {
   width: fit-content !important;

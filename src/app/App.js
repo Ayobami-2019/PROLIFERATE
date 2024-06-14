@@ -18,6 +18,7 @@ import { Reschedule } from './components/dashboard/Reschedule.jsx';
 import { Feedback } from './components/dashboard/Feedback.jsx';
 import { SettingsDashboard } from './components/dashboard/Settings.jsx';
 import { LoginSettings } from './components/dashboard/LoginSettings.jsx';
+import { AddNewDashboard } from './components/dashboard/Add.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,121 +27,126 @@ const router = createBrowserRouter([
   },
   {
     path: routes.login(),
-    element: <Login/>
+    element: <Login />
   },
   {
     path: routes.personalInfo(),
-    element: <InfoForm/>
+    element: <InfoForm />
   },
   {
     path: routes.academics(),
-    element: <AcademicsForm/>
+    element: <AcademicsForm />
   },
   {
     path: routes.preferences(),
-    element: <PreferencesForm/>
+    element: <PreferencesForm />
   },
   {
     path: routes.goals(),
-    element: <GoalsForm/>
+    element: <GoalsForm />
   },
   {
     path: routes.terms(),
-    element: <Terms/>
+    element: <Terms />
   },
   {
     path: routes.confirmEmail(),
-    element: <ConfirmEmail/>
+    element: <ConfirmEmail />
   },
   {
     path: routes.emailConfirmed(),
-    element: <EmailComfirmed/>
+    element: <EmailComfirmed />
   },
   {
     path: routes.tutorPersonalInfo(),
-    element: <Form1/>
+    element: <Form1 />
   },
   {
     path: routes.tutorAcademics(),
-    element: <Form2/>
+    element: <Form2 />
   },
   {
     path: routes.tutorPreferences(),
-    element: <Form3/>
+    element: <Form3 />
   },
   {
     path: routes.tutorTerms(),
-    element: <Form5/>
+    element: <Form5 />
   },
   {
     path: routes.tutorConfirmEmail(),
-    element: <ConfirmEmail/>
+    element: <ConfirmEmail />
   },
   {
     path: routes.tutorEmailConfirmed(),
-    element: <ConfirmEmail/>
+    element: <ConfirmEmail />
   },
   {
     path: routes.style(),
-    element: <TeachingStyleForm/>
+    element: <TeachingStyleForm />
   },
   {
     path: routes.upload(),
-    element: <Upload/>
+    element: <Upload />
   },
   {
     path: routes.dashboard(),
-    element: <Overview/>
+    element: <Overview />
   },
   {
     path: routes.overview(),
-    element: <Overview/>
+    element: <Overview />
   },
   {
     path: routes.progress(),
-    element: <ProgressDashboard/>
+    element: <ProgressDashboard />
   },
   {
     path: routes.notification(),
-    element: <NotificationDashboard/>
+    element: <NotificationDashboard />
   },
   {
     path: routes.refer(),
-    element: <ReferDashboard/>
+    element: <ReferDashboard />
   },
   {
     path: routes.classes(),
-    element: <Classes/>
+    element: <Classes />
   },
   {
     path: routes.upcoming(),
-    element: <UpcomingDashboard/>
+    element: <UpcomingDashboard />
   },
   {
     path: routes.reschedule(),
-    element: <Reschedule/>
+    element: <Reschedule />
   },
   {
     path: routes.feedback(),
-    element: <Feedback/>
+    element: <Feedback />
   },
   {
     path: routes.profileSettings(),
-    element: <SettingsDashboard/>
+    element: <SettingsDashboard />
   },
   {
     path: routes.loginSettings(),
-    element: <LoginSettings/>
+    element: <LoginSettings />
+  },
+  {
+    path: routes.addDashboard(),
+    element: <AddNewDashboard />
+  },
+  {
+    path: '*',
+    element: <h1>404</h1>
   },
   // {
   //   path: routes.summary(),
   //   element: <Feedback/>
   // },
-  {
-    path: '*',
-    element: <h1>404</h1>
-  },
-  
+ 
+
 ])
 function App() {
   // const [info, setInfo] = React.useState({})

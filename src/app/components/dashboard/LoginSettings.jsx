@@ -6,7 +6,8 @@ import { combinedClasses } from '../../utilities/format';
 import { settings } from './data';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as ChatIcon } from "../../assets/icon/chatIcon.svg";
-import { Switch,FormControl,FormLabel } from '@chakra-ui/react'
+import { Switch, FormControl, FormLabel } from '@chakra-ui/react'
+import { MyButton } from '../button';
 
 export const LoginSettings = () => {
 
@@ -35,7 +36,7 @@ export const LoginSettings = () => {
                                     <Switch id='email-alerts' />
                                     <p className={style.switchP}>ON</p>
                                 </FormControl>
-                               
+
 
                             </div>
                         </div>
@@ -58,9 +59,38 @@ export const LoginSettings = () => {
                                 </div>
                             </div>
                         </div>
+                        {/* <ChangePassword/> */}
                     </div>
                 </div>
             </section>
         </Dashboard>
+    )
+}
+
+export const ChangePassword = () => {
+    return (
+        <div className={style.changePassword}>
+            <p className={style.head}>Change Password</p>
+            <p className={style.info}>You may update your password any time. We suggest you choose a strong password and update it regularly, e.g. every 6 months. All new passwords must contain at least 8 characters.We also suggest having at least one capital and one lower-case letter (Aa-Zz), one special symbol (#, &, % etc), and one number (0-9) in your password for the best strength.</p>
+            <form action="" className={style.rowImput}>
+                <CustomInput
+                    // onChange={handleInput} 
+                    name='new' type="password" placeholder="New Password" label={"New Password*"} required={true} />
+                <CustomInput
+                    // onChange={handleInput} 
+                    name='confirm' type="password" placeholder="Confrim New Password" label={"Confrim New Password*"} required={true} />
+                <CustomInput
+                    // onChange={handleInput} 
+                    name='password' type="password" placeholder="Proliferate Password" label={"Proliferate Password*"} required={true} />
+                <div className={style.buttons}>
+                    <MyButton type='primary'
+                    // onClick={handleSave}
+                    // disabled={isSubmitting}
+                    >Save Changes
+                    </MyButton>
+                    <button className={style.cancel}>Cancel</button>
+                </div>
+            </form>
+        </div>
     )
 }

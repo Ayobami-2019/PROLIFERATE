@@ -3,6 +3,7 @@ import { Dashboard } from '.';
 import { tutors } from './data';
 import { ReactComponent as Star } from "../../assets/icon/star.svg";
 import { CustomInput } from '../input';
+import { MyRating } from '../rating';
 
 export const Feedback = () => {
 
@@ -28,7 +29,7 @@ export const Feedback = () => {
                                         <option value="Weekdays">{tutor.name}</option>
                                     )}
                                 </CustomInput>
-                                <div className={style.rating}><Star/><Star/><Star/><Star/><Star/></div>
+                                <MyRating/>
                                 <CustomInput 
                                 // onChange={handleInput} 
                                 name='username' type="textarea" className={style.textarea} />

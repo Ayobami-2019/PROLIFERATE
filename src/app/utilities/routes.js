@@ -99,6 +99,12 @@ export const routes={
     },
     messageDashboard(){
         return '/messages'
+    },
+    addDashboard(){
+        return '/classes/add'
+    },
+    paymentDashboard(){
+        return '/add/payment'
     }
 
 }

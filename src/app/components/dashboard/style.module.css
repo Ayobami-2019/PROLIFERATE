@@ -606,9 +606,9 @@ gap: 20px;
     gap: 10px;
     position: relative;
 }
-.feedbackSection>div>div>form svg path{
+/* .feedbackSection>div>div>form svg path{
     stroke: var(--brown);
-}
+} */
 .feedbackSection .button2{
     width: fit-content;
     position: absolute;
@@ -660,7 +660,7 @@ gap: 20px;
     max-width: 831px;
     width: 100%;
 }
-.settingsDashboard form>div>div input, .settingsDashboard form>div>div textarea{
+.inputsDiv>div input, .settingsDashboard form>div>div textarea{
     background: #E0E4EC;
     border: 0.62px solid #E0E4EC;
 }
@@ -683,6 +683,7 @@ gap: 20px;
     gap: 70px;
     font-family: 'Poppins', sans-serif;
     width: 85%;
+    position: relative;
 
 }
 .loginSettings>div>h5{
@@ -773,3 +774,188 @@ gap: 30px;
     justify-content: center;
     gap: 0;
 }
+.changePassword{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    bottom: -25%;
+    left: 25%;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid #FFFFFF;
+    background: #ffffff;
+    box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.15);
+    padding-bottom: 50px;
+}
+.changePassword .head{
+    background: var(--button-hover);
+    font-weight: 600;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    padding: 7px 0;
+}
+.changePassword .info{
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0 30px;
+}
+.changePassword>form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.changePassword>form .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+}
+.changePassword>form .buttons .cancel{
+    color: #FF0000 !important;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.rowImput>div{
+    flex-direction: row;
+    /* max-width: 100%; */
+    gap: 50px;
+}
+.rowImput>div>div{
+    width: 100%;
+}
+.rowImput>div>div>svg{
+    display: none;
+}
+.addNewCourse{
+    display: flex;
+    flex-direction: column !important;
+}
+.addNewCourse .rowImput{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.addNewCourse .rowImput>button{
+    width: 207px ;
+}
+.addNewCourse .rowImput>div>div>select option{
+    background: #E8E8E8;
+    padding: 30px;
+}
+.addNewCourse .rowImput>div>div>select option:active, .addNewCourse .rowImput>div>div>select option:hover, .addNewCourse .rowImput>div>div>select option:focus{
+    background: rgb(222, 75, 24, 0.28) !important;
+}
+
+/* .addNewCourse .rowImput>div>div>select ::slotted(*) {
+    background: rgb(222, 75, 24, 0.28) !important;
+  } */
+  .tutorRow{
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    
+    
+  }
+ 
+  .tutorRow>li{
+    display: flex;
+    flex-direction: column !important;
+    font-weight: 400px;
+    gap: 10px !important;
+  }
+  .tutorInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .tutorRow li .name{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+  }
+  .tutorRow li .course{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+  }
+  .tutorProfile{
+    border: 1px solid #D9734C;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+  }
+  .tutorProfile:active, .tutorProfile:focus{
+    background: #000000;
+    color: #ffffff;
+  }
+  .moreTutorInfo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  .moreTutorInfo .tutorInfo{
+    /* align-items: start; */
+    margin-top: 20px;
+  }
+  .tutorInfoDiv li{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 20px;
+    list-style: circle;
+    align-items: start !important;
+    
+  }
+  .tutorInfoDiv li span, .tutorInfoDiv li p{
+    font-weight: 400;
+    
+  }
+  .tutorInfoDiv li p{
+    display: flex;
+    flex-wrap: wrap !important;
+  }
+  .tutorInfoDiv>div{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+  .upcomingAlert .tutorDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  .upcomingAlert .tutorDetails>div>div>p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+  .moreTutorInfo .upcomingAlert>p{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+  }
+  .moreTutorInfo .upcomingAlert>h5{
+    text-align: center;
+    width: 100%;
+  }
+  .moreTutorInfo .upcomingAlert>p>span{
+    color: var(--brown);
+  }
+  .moreTutorInfo .upcomingAlert{
+    top: 15%;
+    min-width: 509px;
+  }
+  .moreTutorInfo .buttons button{
+  }

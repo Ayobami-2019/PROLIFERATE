@@ -80,8 +80,7 @@
     color: #666666;
     padding: 16px;
     background: #FFFFFF;
-    font-weight: 400;
-    font-style: 14px;
+    font-size: 14px;
 }
 .textarea {
     display: flex;
