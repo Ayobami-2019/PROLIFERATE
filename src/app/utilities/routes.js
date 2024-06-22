@@ -94,8 +94,14 @@ export const routes={
     assignmentDashboard(){
         return '/assignments'
     },
+    submitAssignment(){
+        return '/assignments/submit'
+    },
     tutorDashboard(){
         return '/tutors'
+    },
+    manageTutor(){
+        return '/tutors/manageTutors'
     },
     messageDashboard(){
         return '/messages'

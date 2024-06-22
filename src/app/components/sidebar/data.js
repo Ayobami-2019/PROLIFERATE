@@ -14,7 +14,7 @@ import { ReactComponent as Home } from "../../assets/icon/homeIcon.svg";
 import { routes } from '../../utilities/routes'
 import { classes } from "../dashboard/data";
 
-const newRoutes = {
+export const newRoutes = {
     overview() {
         return '/dashboard/overview'
     },
@@ -42,8 +42,14 @@ const newRoutes = {
     assignmentDashboard(){
         return '/assignments'
     },
+    submitAssignment(){
+        return '/assignments/submit'
+    },
     tutorDashboard(){
         return '/tutors'
+    },
+    manageTutor(){
+        return '/tutors/manageTutors'
     },
     messageDashboard(){
         return '/messages'
@@ -62,26 +68,38 @@ const newRoutes = {
 export const sideBarNav = [
     //{icon: <GoHome/>, title: '', url: ''},
     {
-        icon: <Home />, title: 'Dashboard', url: newRoutes.overview(),
+        id: 0,
+        icon: <Home />, title: 'Dashboard', 
+        // url: newRoutes.overview(),
         subtitle: [
-            { title: 'Overview', url: newRoutes.overview() },
-            { title: 'Progress Tracker', url: newRoutes.progress() },
-            { title: 'Notifications', url: newRoutes.notification() }
+            {id: 0, title: 'Overview', url: newRoutes.overview() },
+            {id: 1, title: 'Progress Tracker', url: newRoutes.progress() },
+            {id: 2, title: 'Notifications', url: newRoutes.notification() }
         ]
     },
     {
-        icon: <Studies />, title: 'Class', url: newRoutes.classes(),
+        id: 1,
+        icon: <Studies />, title: 'Class', 
+        // url: newRoutes.classes(),
         subtitle: [
-            { title: 'My Classes', url: newRoutes.classes() },
-            { title: 'Upcoming Clases', url: newRoutes.upcoming() },
-            { title: 'Add New', url: newRoutes.addDashboard() }
+            {id: 0, title: 'My Classes', url: newRoutes.classes() },
+            {id: 1, title: 'Upcoming Clases', url: newRoutes.upcoming() },
+            {id: 2, title: 'Add New', url: newRoutes.addDashboard() }
         ]
     },
-    { icon: <Assignment />, title: 'Assignments', url: newRoutes.assignmentDashboard() },
-    { icon: <Tutor />, title: 'Tutor', url: newRoutes.tutorDashboard() },
-    { icon: <Message />, title: 'Messaging', url: newRoutes.messageDashboard },
-    { icon: <Earnings />, title: 'Payment', url: newRoutes.paymentDashboard() },
-    { icon: <Feedback />, title: 'Feedback', url: newRoutes.feedback() },
-    { icon: < Settings />, title: 'Settings', url: newRoutes.profileSettings() },
-    { icon: <LogoutIcon />, title: 'Logout', url: '' }
+    {id: 2, icon: <Assignment />, title: 'Assignments',
+    subtitle: [
+        {id: 0, title: 'View Assignment', url: newRoutes.assignmentDashboard() },
+        {id: 1, title: 'Submit Assignment', url: newRoutes.submitAssignment() }
+    ]},
+    {id: 3, icon: <Tutor />, title: 'Tutor',
+    subtitle: [
+        {id: 0, title: 'My Tutors', url: newRoutes.tutorDashboard() },
+        {id: 1, title: 'Manage Tutors', url: newRoutes.manageTutor() }
+    ]},
+    {id: 4, icon: <Message />, title: 'Messaging', url: newRoutes.messageDashboard },
+    {id: 5, icon: <Earnings />, title: 'Payment', url: newRoutes.paymentDashboard() },
+    {id: 6, icon: <Feedback />, title: 'Feedback', url: newRoutes.feedback() },
+    {id: 7, icon: < Settings />, title: 'Settings', url: newRoutes.profileSettings() },
+    {id: 8, icon: <LogoutIcon />, title: 'Logout', url: '' }
 ]

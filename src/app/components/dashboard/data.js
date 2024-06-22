@@ -175,3 +175,14 @@ export const courses=['Mathematics', 'English Language Arts (ELA)', 'Science', '
 'Art', 'Music', 'Foreign Languages (e.g., Spanish, French)', 'Computer Science', 'Health Education', 'Civics', 'Economics', 'Literature', 'Environmental Studies',
 'Technology Education', 'Religious Studies (depending on the curriculum)', 'Drama', 'Career and Technical Education (CTE)'
 ]
+
+export const assignmentList=[
+    {subject: 'Math', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
+    {subject: 'English', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
+    {subject: 'Science', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
+    {subject: 'History', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
+    {subject: 'Art', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
+    {subject: 'Art', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
+    {subject: 'Art', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
+    {subject: 'Art', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'}
+]

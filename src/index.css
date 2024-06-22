@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
   margin: 0;
@@ -29,7 +29,10 @@ code {
   --button-hover: #186bad;
   --opacity-white: rgb(255, 255, 255, 0.95);
   --multiselect: #E9E7E7;
-  --accent: #D9734C;  
+  --accent: #D9734C;
+  --selected-blue: #1D8EED; 
+  --gray: #333333; 
+  --border: #D0D5DD;
 }
 h3,h6,h1,h2,h4,h5,p{
   margin: 0;
@@ -88,4 +91,7 @@ label .css-7roig {
 .css-12sjb1l .css-16xaqf9{
   display: none;
 }
-
+.subList a.active{
+  border-bottom: 2px solid var(--button-hover);
+  font-weight: 600;
+}

@@ -9,6 +9,15 @@ import { MyRating } from '../rating';
 import { Link } from 'react-router-dom';
 import { routes } from '../../utilities/routes';
 import { combinedClasses } from '../../utilities/format';
+import { createContext, useContext, useState, useMemo } from 'react';
+
+// const [input] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+//   const even = useMemo(() => input.filter(isEven), [input]);
+//   const odd = useMemo(() => input.filter(isOdd), [input]);
+//   const prime = useMemo(() => input.filter(isPrime), [input]);
+
+const TutorContext=createContext(null)
+// const PaymentContext=createContext(null)
 
 export const AddNewDashboard = () => {
     // const [input, setInput] = React.useState({
@@ -17,6 +26,17 @@ export const AddNewDashboard = () => {
     const[index, setIndex]=React.useState()
     const [input, setInput] = React.useState('')
     const [info, setInfo] = React.useState()
+    // const info = useContext(TutorContext);
+    // const paymentButton = useContext(PaymentContext);
+    // const index=info.name
+    const [feedback, setFeedback] = React.useState(false)
+    const [submitted, setSubmitted] = React.useState(false)
+    const feedbackShow = (e) => {
+        e.preventDefault()
+        setFeedback(!feedback);
+        setSubmitted(true)
+
+    }
     const handleInput = (e) => {
         // e.persist()
         // setInput({ ...input, [e.target.name]: e.target.value })
@@ -28,10 +48,26 @@ export const AddNewDashboard = () => {
         setInfo(tutor)
         // Navigate(routes.medicineDetail())
     }
-    console.log(index)
+    const [paymentPage, setPaymentPage]=React.useState(false)
+    const paymentButton=()=>{
+        setPaymentPage(!paymentPage)
+    }
+    const cancel = (e) => {
+        // e.preventDefault()
+        setFeedback(false);
+        setSubmitted(false);
+    }
+
     return (
         <Dashboard>
-            <section className={style.main}>
+            <TutorContext.Provider value={info}>
+            {paymentPage ?
+                // <PaymentContext.Provider value={paymentButton()}>
+                    <Payment/> 
+                    // </PaymentContext.Provider>
+                    :
+                
+                <section className={style.main}>
                 <h3>Add Subject/Tutor:</h3>
                 <div className={style.addNewCourse}>
                     {/* <p>Choose a new Subject/Tutor:</p> */}
@@ -51,7 +87,59 @@ export const AddNewDashboard = () => {
                         </MyButton>
                     </form>
                     {index ?
-                <TutorDetails info={info} />
+                        <div className={style.moreTutorInfo}>
+                        <div className={style.tutorInfo}>
+                            {info.icon}
+                            <p className={style.name}>{info.name}</p>
+                            <p className={style.course}>{info.course} Tutor</p>
+                            <MyRating/>
+                        </div>
+                        <div className={style.tutorInfoDiv}>
+                            <TutorDetails info={info}/>
+                            <div>
+                                <MyButton type='outline'
+                                    // onClick={handleSave}
+                                    // disabled={isSubmitting}
+                                    >
+                                        <Link to={routes.messageDashboard}>Chat</Link>
+                                </MyButton>
+                                <MyButton type='outline'
+                                    // onClick={handleSave}
+                                    // disabled={isSubmitting}
+                                    >Evaluation Call
+                                </MyButton>
+                                <MyButton type='primary' onClick={feedbackShow}
+                                    // onClick={handleSave}
+                                    // disabled={isSubmitting}
+                                    >Enrol in class
+                                </MyButton>
+                            </div>
+                        </div>
+                        {feedback &&
+                                <div className={combinedClasses(style.referFeedback, style.upcomingAlert)}>
+                                    <h5>Confirm selection</h5>
+                                    <p>Take a Moment to review the <span>tutor</span> you selected</p>
+                                    <div className={style.tutorDetails}>
+                                            {info.icon}
+                                            <div>
+                                            <p>Name: <span>{info.name}</span></p>
+                                            <p>Subject: <span>{info.course}</span></p>
+                                            <p>Availability: {info.availabilty}</p>
+                                            </div>
+                                    </div>
+                                    <div className={style.buttons}>
+                                        <button onClick={cancel} className={style.button1}>Change Tutor</button>
+                                        <button className={style.button2} 
+                                        onClick={paymentButton}
+                                        >
+                                            Confirm</button>
+                                            {/* <Link to={routes.paymentDashboard()}>Confirm</Link></button> */}
+                                    </div>
+                                </div>
+                            }
+            
+                            
+                    </div>
                 :
                 <ul className={style.tutorRow}>
                         {subjectTutors.map((tutor) =>
@@ -72,11 +160,103 @@ export const AddNewDashboard = () => {
                 {/* </div> */}
                 
             </section>
+            }
+            </TutorContext.Provider>
         </Dashboard>
     )
 }
 
 export const TutorDetails=(props)=>{
+    const info = useContext(TutorContext);
+    const tutorInfo=props.info
+    console.log(tutorInfo)
+    return(
+        <ul className={style.listStyle}>
+            <li>Subject Expertise: 
+                <span>{tutorInfo.course}</span>
+            </li>
+            <li>Qualifications: 
+                <span>{tutorInfo.qualification}</span>
+            </li>
+            <li>Teaching Style: 
+                <span>{tutorInfo.style}</span>
+            </li>
+            <li>Availability: 
+                <span>{tutorInfo.availabilty}</span>
+            </li>
+            <li>Rating: 
+                <span>{tutorInfo.rating}(based on student feedback)</span>
+            </li>
+            <li>Bio: 
+                <span>{tutorInfo.bio}</span>
+            </li>
+        </ul>
+        
+    )
+}
+// export const PaymentFeedback=()=>{
+//     return()
+// }
+export const Payment=()=>{
+    const info = useContext(TutorContext);
+    
+    
+    return(
+            <section className={style.main}>
+                <h3>Make Payment</h3>
+                <div className={style.paymentDiv}>
+                    <div className={style.tutorInfo}>
+                        {info.icon}
+                        <div>
+                            <p className={style.name}>{info.name}</p>
+                            <p className={style.course}>{info.course} Tutor</p>
+                            <MyRating/>
+                        </div>
+                    </div>
+                    <form action="" className={style.rowImput}>
+                        <CustomInput type="select" label='Select Month:' name='month'
+                        // onChange={handleInput}
+                        >
+                            <option value="Month">Month</option>
+                            <option value="Month">Jan</option>
+                        </CustomInput>
+                        <div className={style.radioInputs}>
+                            <p>Payment Method</p>
+                            {/* <div> */}
+                                <input type="radio" id='credit' name='credit' value='credit' />
+                        <label htmlFor="credit">Credit Card</label>
+                        <input type="radio" id='debit' name='debit' value='debit' />
+                        <label htmlFor="debit">Debit Card</label>
+                        <input type="radio" id='paypal' name='paypal' value='paypal' />
+                        <label htmlFor="paypal">Paypal</label>
+                        <input type="radio" id='transfer' name='transfer' value='transfer' />
+                        <label htmlFor="credit">Bank Transfer</label>
+                        {/* </div> */}
+                        </div>
+                        <CustomInput 
+                        // onChange={handleInput} 
+                        name='name' type="text"label={"Name on Card:"}/>
+                        <CustomInput 
+                        // onChange={handleInput} 
+                        name='number' type="number"label={"Card Number"}/>
+                        <CustomInput 
+                        // onChange={handleInput} 
+                        name='name' type="number"label={"Expiration"}/>
+                        <CustomInput 
+                        // onChange={handleInput} 
+                        name='name' type="number"label={"CVV/CVC"}/>
+                        <MyButton type='primary'
+                        // onClick={handleSave}
+                        // disabled={isSubmitting}
+                        >Confirm Payment
+                        </MyButton>
+                    </form>
+                </div>
+            </section>
+    )
+}
+
+export const PayMethods=()=>{
     const [feedback, setFeedback] = React.useState(false)
     const [submitted, setSubmitted] = React.useState(false)
     const feedbackShow = (e) => {
@@ -85,79 +265,46 @@ export const TutorDetails=(props)=>{
         setSubmitted(true)
 
     }
+    const handleInput = (e) => {
+        // e.persist()
+        // setInput({ ...input, [e.target.name]: e.target.value })
+        // setInput(e.target.value)
+    }
     const cancel = (e) => {
         // e.preventDefault()
         setFeedback(false);
         setSubmitted(false);
     }
     return(
-        <div className={style.moreTutorInfo}>
-            <div className={style.tutorInfo}>
-                {props.info.icon}
-                <p className={style.name}>{props.info.name}</p>
-                <p className={style.course}>{props.info.course} Tutor</p>
-                <MyRating/>
-            </div>
-            <div className={style.tutorInfoDiv}>
-                <ul>
-                    <li>Subject Expertise: 
-                        <span>{props.info.course}</span>
-                    </li>
-                    <li>Qualifications: 
-                        <span>{props.info.qualification}</span>
-                    </li>
-                    <li>Teaching Style: 
-                        <span>{props.info.style}</span>
-                    </li>
-                    <li>Availability: 
-                        <span>{props.info.availabilty}</span>
-                    </li>
-                    <li>Rating: 
-                        <span>{props.info.rating} (based on student feedback)</span>
-                    </li>
-                    <li>Bio: 
-                        <span>{props.info.bio}</span>
-                    </li>
-                </ul>
-                <div>
-                    <MyButton type='outline'
-                        // onClick={handleSave}
-                        // disabled={isSubmitting}
-                        >
-                            <Link to={routes.messageDashboard}>Chat</Link>
-                    </MyButton>
-                    <MyButton type='outline'
-                        // onClick={handleSave}
-                        // disabled={isSubmitting}
-                        >Evaluation Call
-                    </MyButton>
-                    <MyButton type='primary' onClick={feedbackShow}
-                        // onClick={handleSave}
-                        // disabled={isSubmitting}
-                        >Enrol in class
-                    </MyButton>
-                </div>
-            </div>
-            {feedback &&
-                    <div className={combinedClasses(style.referFeedback, style.upcomingAlert)}>
-                        <h5>Confirm selection</h5>
-                        <p>Take a Moment to review the <span>tutor</span> you selected</p>
-                        <div className={style.tutorDetails}>
-                                {props.info.icon}
-                                <div>
-                                <p>Name: <span>{props.info.name}</span></p>
-                                <p>Subject: <span>{props.info.course}</span></p>
-                                <p>Availability: {props.info.availabilty}</p>
-                                </div>
-                        </div>
-                        <div className={style.buttons}>
-                            <button onClick={cancel} className={style.button1}>Change Tutor</button>
-                            <button className={style.button2}>
-                                <Link to={routes.paymentDashboard()}>Confirm</Link></button>
-                        </div>
-                    </div>
-                }
+        <div className={style.bankTransfer}>
+            <h6>Bank Transfer Information</h6>
+        <ul>
+            <li>Bank Name: <span>Wema Bank</span></li>
+            <li>Account Name: <span>Proliferate Ai</span></li>
+            <li>Account Number<span>0918273625</span></li>
+            <li>Routing Number(if applicable): <span>SWG2B3645</span></li>
+        </ul>
+
+        <div>
+        <CustomInput 
+            // onChange={handleInput} 
+            name='name' type="email"label={"PayPal Email:"}/>
+                        
         </div>
+
+
+        {feedback &&
+                <div className={style.referFeedback}>
+                    <h5>Invitation Link Sent</h5>
+                    <p>Congratulations! You've successfully selected Henry Arsene as your tutor for Mathematics .</p>
+                    <p>Your tutor will be notified of your selection, and they'll reach out to you shortly to discuss your learning goals and schedule your first session.
+Happy learning!</p>
+                    <button onClick={cancel}>OK</button>
+                </div>}
+
+        </div>
+
+        
     )
 }
 // function UserList({ users }) {

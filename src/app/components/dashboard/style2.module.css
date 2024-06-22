@@ -1,0 +1,191 @@
+.assignmentDiv{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.submitUL{
+    position: relative;
+}
+.assignmentDiv .textarea{
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 456px; */
+}
+.assignmentDiv>ul, .assignmentDiv>ul>li{
+    width: 456px;
+    padding-right: 20px;
+}
+.assignmentDiv>ul>li{
+    border: 1px solid var(--brown);
+    display: flex;
+    justify-content: space-between;
+}
+.itemFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--selected-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+.itemFooter p{
+    cursor: pointer;
+}
+.itemFooter .line{
+    /* border-bottom: 1px solid var(--selected-blue); */
+text-decoration: underline;
+}
+.assignmentDiv>ul .bold{
+    color: var(--gray);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding-right: 20px;
+}
+.assignmentDiv>ul .bold>span{
+font-weight: 400;
+}
+.assignmentDiv>ul .assignment{
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.assignmentDiv>ul .assignment li{
+    padding: 5px;
+    background: var(--multiselect);
+    cursor: pointer;
+    border-radius: 10px;
+}
+.assignmentDiv>ul ul{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.assignmentDiv .textarea{
+    width: 456px;
+}
+.downloadedAlert{
+    left: 17%;
+    top: 15%;
+    display: flex;
+    gap: 20px;
+}
+.downloadedAlert button{
+    color: #ffffff;
+    padding: 10px 58px;
+}
+.submitDiv .downloadedAlert .head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    
+    padding: 20px auto;
+    border-bottom: 1px solid var(--border);
+}
+.submitDiv .downloadedAlert>p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.uploadAlert .note{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #737f9e;
+}
+.uploadAlert{
+    left: 10%;
+}
+.uploadAlert .head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.uploadAlert .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.uploadAlert .buttons button{
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    align-items: center;
+}
+.uploadAlert .buttons .button1, .uploadAlert .container>label>span{
+    color: #0162E8;
+    border: 1px solid #0162E8;
+    background: none;
+}
+.uploadAlert .container>label>span{
+    font-family: 'Montserrat' sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.uploadAlert .container{
+    border: 1px dashed #0162E8;
+    border-radius: 10px;
+    background: #ECF0FA;
+    color: #364261;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    gap: 10px;
+}
+.tutorDashboard .row{
+    display: flex;
+    gap: 20px;
+}
+.tutorDashboard>ul>li{
+    width: fit-content;
+    border-top: none;
+}
+.tutorDashboard .tutorDetails{
+    display: flex;
+    flex-direction: row;
+}
+.tutorDashboard .tutorDetails>div{
+    margin-top: 20px;
+}
+.tutorDashboard .tutorDetails ul li{
+    display: flex;
+    align-items: start;
+}
+.tutorDetails>.tutorDetailsDiv>.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.tutorDetails>.tutorDetailsDiv>.buttons>button:first-child{
+    background: #000000;
+}
+.tutorDetails>.tutorDetailsDiv>.buttons>button:last-child{
+    border: 1px solid var(--accent);
+    color: #000000;
+    background: none;
+}
+.manageTutors>.buttons{
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.manageTutors>.buttons>button:last-child{
+    border: 1px solid var(--accent);
+    color: #000000;
+    background: none;
+}
+

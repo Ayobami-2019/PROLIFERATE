@@ -22,7 +22,7 @@
 }
 
 .main>h3 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     border-bottom: 1px solid #969696;
 }
@@ -34,7 +34,9 @@
     /* flex-direction: column; */
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 4%;
+    padding: 1.25rem 4%;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .row {
@@ -56,7 +58,7 @@
 
 .overviewHeading>h6 {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #000000;
 }
 
@@ -64,7 +66,7 @@
     color: #09BCFF;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .main ul {
@@ -77,8 +79,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 37px;
-    padding: 16px 0 16px 16px;
+    gap: 2.3125rem;
+    padding: 1rem 0 1rem 1rem;
 
 }
 
@@ -97,41 +99,48 @@ gap: 20px;
     flex-direction: column;
 }
 
-.upcomingClasses li {
-    align-items: flex-end !important;
-}
+/* .upcomingClasses li {
+    
+} */
 
 .upcomingClasses li>p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #000000;
 }
 
-.upcomingClasses li>button {
+.upcomingClasses li .daysTime {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end !important;
+}
+
+.upcomingClasses li .daysTime>button {
     background: var(--multiselect);
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 0.625rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #000000;
 }
 
 .course {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: #000000;
 }
 
 .date {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #000000;
 }
 
@@ -140,7 +149,7 @@ gap: 20px;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .assignment li>div .course {
@@ -152,33 +161,50 @@ gap: 20px;
 }
 
 .overviewRow2 .overviewHeading {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .overviewRow2 li>div {
-    gap: 16px;
+    gap: 1rem;
 }
 
-.tutors li .tutor {
+.tutorUL li .tutor {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
-.tutors li>button {
+.tutorUL .row>div svg,
+.tutorUL .row>div>div {
+    height: 36px;
+    width: 36px;
+}
+
+.tutorUL .row>div>div {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tutorUL li {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+}
+
+.tutorUL li>button {
     background: #D4F8D3;
-    padding: 4px 12px;
-    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1.25rem;
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #222222;
 }
 
-.tutors li>div>div {
+.tutorUL li>div>div {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 0.625rem;
     align-items: center;
 }
 
@@ -198,7 +224,7 @@ gap: 20px;
     border-radius: 8px;
     color: #0052B4;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +234,7 @@ gap: 20px;
 
 .messages li>div>div .name {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #333333;
 }
 
@@ -216,12 +242,12 @@ gap: 20px;
 .messages li>p {
     color: #8A8A8A;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 0.625rem;
 }
 
 .attendance li {
     flex-direction: column !important;
-    gap: 10px !important;
+    gap: 0.625rem !important;
 
 }
 
@@ -235,13 +261,13 @@ gap: 20px;
 
 .attendance ul li>div .course {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #000000;
 }
 
 .attendance ul li>div .mark {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #8A8A8A;
 }
 
@@ -253,7 +279,7 @@ gap: 20px;
 .progress>div {
     width: 100%;
     height: 8px;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     overflow: hidden;
 }
 
@@ -277,15 +303,15 @@ gap: 20px;
     justify-content: space-between;
 }
 
-.tablePagination ul {
+.tablePagination .pagination {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1.25rem;
     padding-right: 4%;
 }
 
-.tablePagination ul li {
-    padding: 5px 15px;
+.tablePagination .pagination li {
+    padding: 0.3125rem 0.9375rem;
     /* border-radius: 10px;
     border: 0.5px solid rgb(255, 255, 255, 0.3);
     box-shadow: 2px 2px 4px 0 #54BAB9;
@@ -295,12 +321,12 @@ gap: 20px;
 
 .progressTable {
 
-    border-radius: 10px;
+    border-radius: 0.625rem;
     box-shadow: 0 0 4px 0 rgb(0, 0, 0, 0.25);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     width: 90.5%;
-    padding: 30px;
+    padding: 1.875rem;
     margin-left: 4%;
     border-collapse: separate;
 }
@@ -311,7 +337,7 @@ gap: 20px;
 } */
 .progressTable thead th {
     color: #757575;
-    font-size: 14px;
+    font-size: 0.875rem;
     /* background: red; */
     text-align: start;
 }
@@ -321,7 +347,7 @@ gap: 20px;
 }
 
 .progressTable .test {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .dateTime {
@@ -329,14 +355,14 @@ gap: 20px;
     color: #757575;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .progressTable tbody tr td {
     border-bottom: 1px solid #E0E0E0;
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 1.25rem;
+    padding-bottom: 0.625rem;
 }
 
 .noborder td {
@@ -347,8 +373,8 @@ gap: 20px;
 .upcoming,
 .pass,
 .fail {
-    padding: 4px 23px;
-    border-radius: 10px;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.625rem;
     height: fit-content;
     width: fit-content;
     position: absolute;
@@ -386,36 +412,38 @@ gap: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 33px;
+    gap: 32rem;
     color: #000000;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .refer {
     display: flex;
     flex-direction: column !important;
-    gap: 50px;
+    gap: 3.125rem;
     font-family: 'Open Sans', sans-serif;
 
 }
 
-.refer>p, .feedbackSection {
+.refer>p,
+.feedbackSection {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .refer form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .refer button,
-.classes .tableHead button, .reschedule>button {
+.classes .tableHead button,
+.reschedule>button {
     background: var(--button-hover);
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border-radius: 8px;
     color: #ffffff;
     width: fit-content;
@@ -423,18 +451,18 @@ gap: 20px;
 
 .refer>div>h6 {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .refer>div>p {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     max-width: 733px;
 }
 
 .classes {
     flex-direction: column !important;
-    gap: 20px;
+    gap: 1.25rem;
 
 }
 
@@ -453,8 +481,8 @@ gap: 20px;
     text-align: left;
     padding-left: 4%;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    padding-top: 10px;
+    font-size: 0.875rem;
+    padding-top: 0.625rem;
     padding-bottom: 10px;
 }
 
@@ -490,12 +518,12 @@ gap: 20px;
 .referFeedback {
     font-family: "IBM Plex Sans", sans-serif;
     background: #FFFFFF;
-    padding: 40px;
-    box-shadow: 0 8px 30px 0 rgb(0, 0, 0, 0.12);
-    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 1.875rem 0 rgb(0, 0, 0, 0.12);
+    border-radius: 1rem;
     flex-direction: column !important;
-    gap: 44px;
-    max-width: 600px !important;
+    gap: 2.75rem;
+    max-width: 37.5rem !important;
     position: absolute;
     /* align-self: center; */
     margin-top: 10%;
@@ -504,123 +532,142 @@ gap: 20px;
 
 .referFeedback h5 {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .referFeedback p {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 .referFeedback button {
     font-family: "IBM Plex Sans", sans-serif;
     color: #1F1F1F;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 6px;
     border: 1px solid #000000;
-    padding: 16px 58px;
+    padding: 2rem 3.625rem;
 }
-.referMain:disabled{
+
+.referMain:disabled {
     background: #D9D9D9;
 }
-.referFeedback .buttons{
+
+.referFeedback .buttons {
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
-.upcomingAlert{
-    max-width: 500px !important;
+
+.upcomingAlert {
+    max-width: 31.25rem !important;
 }
-.referFeedback .buttons .button2{
+
+.referFeedback .buttons .button2 {
     background: var(--button-hover);
     color: #ffffff;
     border: none;
 }
-.button2{
+
+.button2 {
     background: var(--button-hover);
     color: #ffffff;
     border: none;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     border-radius: 6px;
     padding: 8px 9px;
 }
-.reschedule{
+
+.reschedule {
     display: flex;
     flex-direction: column !important;
-    gap: 20px;
+    gap: 1.25px;
     position: relative;
     /* padding-right: 3% !important; */
 }
-.reschedule button{
+
+.reschedule button {
     position: absolute;
     bottom: 0;
     right: 3%;
 }
-.calendarHead{
+
+.calendarHead {
     display: flex;
     flex-direction: row;
     align-items: center;
     /* ga */
 }
+
 /* .calendar{
     background: red;
 } */
-.calendar>div{
+.calendar>div {
     display: flex;
     flex-direction: row;
 }
-.feedbackSection{
+
+.feedbackSection {
     display: flex;
     flex-direction: column !important;
-    gap: 30px !important;
+    gap: 1.875rem !important;
     color: #000000;
     width: fit-content;
 }
-.feedbackSection h6{
+
+.feedbackSection h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
-.feedbackSection>div{
-    display: flex;
-    flex-direction: column ;
-    gap: 20px;
-}
-.feedbackSection>div>div{
-    display: flex;
-    flex-direction: row;
-    gap: 50px
-}
-.feedbackSection>div>div>p{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
 
-}
-.feedbackSection>div>div>form{
+.feedbackSection>div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.25rem;
+}
+
+.feedbackSection>div>div {
+    display: flex;
+    flex-direction: row;
+    gap: 3.125rem;
+}
+
+.feedbackSection>div>div>p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+
+}
+
+.feedbackSection>div>div>form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
     position: relative;
 }
+
 /* .feedbackSection>div>div>form svg path{
     stroke: var(--brown);
 } */
-.feedbackSection .button2{
+.feedbackSection .button2 {
     width: fit-content;
     position: absolute;
     right: 0;
-    bottom: -70px;
+    bottom: -4.375rem;
 }
-.textarea, .textarea2{
-    min-height: 150px;
+
+.textarea,
+.textarea2 {
+    min-height: 9.375rem;
 }
-.imageUpload{
+
+.imageUpload {
     background: #EDF2F6;
-    border-radius: 11.09px;
+    border-radius: 0.693rem;
     border: 0.62px dashed #4C535F;
     display: flex;
     flex-direction: column;
@@ -629,155 +676,181 @@ gap: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: #4C535F;
-    padding: 25.61px;
-    gap: 10px;
+    padding: 1.601rem;
+    gap: 0.625rem;
     width: fit-content;
 }
-.imageUpload p{
-    width: 100px;
+
+.imageUpload p {
+    width: 6.25rem;
     text-align: center;
 }
-.settingsDashboard{
+
+.settingsDashboard {
     display: flex;
     flex-direction: column !important;
-    gap: 30px;
+    gap: 1.875rem;
 }
-.settingsDashboard ul{
+
+.settingsDashboard ul {
     display: flex;
     flex-direction: row;
-    gap: 7.39px;
+    gap: 0.462rem;
 }
-.settingsDashboard ul li{
+
+.settingsDashboard ul li {
     font-family: 'Open Sans', sans-serif;
-    padding: 7.39px;
+    padding: 0.452rem;
     color: #717B8C;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     border-bottom: 1.23px solid #E0E4EC;
 }
+
 .textarea2 {
     /* height: 100px; */
-    max-width: 831px;
+    max-width: 51.9375rem;
     width: 100%;
 }
-.inputsDiv>div input, .settingsDashboard form>div>div textarea{
+
+.inputsDiv>div input,
+.settingsDashboard form>div>div textarea {
     background: #E0E4EC;
     border: 0.62px solid #E0E4EC;
 }
-.inputsDiv{
+
+.inputsDiv {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 3.125rem;
     /* height: 250px; */
     flex-wrap: wrap;
 }
-.settingsDashboard form{
+
+.settingsDashboard form {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
-.loginSettings{
+.loginSettings {
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 4.375rem;
     font-family: 'Poppins', sans-serif;
     width: 85%;
     position: relative;
 
 }
-.loginSettings>div>h5{
+
+.loginSettings>div>h5 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-.twoFactor{
+
+.twoFactor {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.twoFactor>p{
+
+.twoFactor>p {
     font-weight: 500;
-    font-size: 14px;
-    max-width: 700px;
-    margin-top: 10px;
-    margin-left: 5px;
+    font-size: 0.875rem;
+    max-width: 43.75rem;
+    margin-top: 0.625rem;
+    margin-left: 0.3125rem;
 }
-.switch{
+
+.switch {
     position: relative;
 }
-.switchP{
+
+.switchP {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     position: absolute;
     left: 15%;
     color: #ffffff;
     display: flex;
     justify-self: center;
     align-self: center;
-    
+
 }
-.loginSettings .row2{
-display: flex;
-flex-direction: column;
-gap: 30px;
+
+.loginSettings .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
 }
-.loginSettings .row2 .row2heading{
+
+.loginSettings .row2 .row2heading {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid rgb(0, 0, 0, 0.25);
-    padding: 15px 0;
-}
-.loginSettings .row2 h6{
-    font-weight: 600;
-    font-size: 14px;
+    padding: 0.9375rem 0;
 }
 
-.separate h6{
+.loginSettings .row2 h6 {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.separate h6 {
+    font-weight: 600;
+    font-size: 0.875rem;
     /* color: rgb(0, 0, 0, 0.5); */
     cursor: pointer;
 }
+
 /* .separate h6:active, .separate h6:{
     color: #000000;
 } */
-.loginSettings .row2 .row2heading button{
-    padding: 4px 10px;
+.loginSettings .row2 .row2heading button {
+    padding: 4px 0.625rem;
     border-radius: 5px;
     background: #186BAD;
     box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.25);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #ffffff;
 }
-.separate, .separate>div{
+
+.separate,
+.separate>div {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.separate{
-    gap: 100px;
+
+.separate {
+    gap: 6.25rem;
 }
-.separate>div{
-    gap: 20px;
+
+.separate>div {
+    gap: 1.25rem;
 }
-.separate>div>div>p, .separate .message{
+
+.separate>div>div>p,
+.separate .message {
     color: rgb(0, 0, 0, 0.5);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
-.separate .message{
+
+.separate .message {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0;
 }
-.changePassword{
+
+.changePassword {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.875rem;
     font-family: 'Poppins', sans-serif;
     position: absolute;
     bottom: -25%;
@@ -786,176 +859,527 @@ gap: 30px;
     border: 1px solid #FFFFFF;
     background: #ffffff;
     box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.15);
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
 }
-.changePassword .head{
+
+.changePassword .head {
     background: var(--button-hover);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #ffffff;
     text-align: center;
     padding: 7px 0;
 }
-.changePassword .info{
+
+.changePassword .info {
     font-weight: 400;
-    font-size: 12px;
-    padding: 0 30px;
+    font-size: 0.75rem;
+    padding: 0 1.875rem;
 }
-.changePassword>form{
+
+.changePassword>form {
     display: flex;
     flex-direction: column;
-    padding: 0 30px;
+    padding: 0 1.875rem;
 }
-.changePassword>form .buttons{
+
+.changePassword>form .buttons {
     display: flex;
     flex-direction: row;
-    gap: 70px;
+    gap: 4.375rem;
     justify-content: center;
 }
-.changePassword>form .buttons .cancel{
+
+.changePassword>form .buttons .cancel {
     color: #FF0000 !important;
     font-family: 'Poppins' sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
-.rowImput>div{
+
+.rowImput>div {
     flex-direction: row;
     /* max-width: 100%; */
-    gap: 50px;
+    gap: 3.125rem;
 }
-.rowImput>div>div{
+
+.rowImput>div>div {
     width: 100%;
 }
-.rowImput>div>div>svg{
+
+.rowImput>div>div>svg {
     display: none;
 }
-.addNewCourse{
+
+.addNewCourse {
     display: flex;
     flex-direction: column !important;
 }
-.addNewCourse .rowImput{
+
+.addNewCourse .rowImput {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 3.125rem;
 }
-.addNewCourse .rowImput>button{
-    width: 207px ;
+
+.addNewCourse .rowImput>button {
+    width: 207px;
 }
-.addNewCourse .rowImput>div>div>select option{
+
+.addNewCourse .rowImput>div>div>select option {
     background: #E8E8E8;
-    padding: 30px;
+    padding: 12.9375rem;
 }
-.addNewCourse .rowImput>div>div>select option:active, .addNewCourse .rowImput>div>div>select option:hover, .addNewCourse .rowImput>div>div>select option:focus{
+
+.addNewCourse .rowImput>div>div>select option:active,
+.addNewCourse .rowImput>div>div>select option:hover,
+.addNewCourse .rowImput>div>div>select option:focus {
     background: rgb(222, 75, 24, 0.28) !important;
 }
 
 /* .addNewCourse .rowImput>div>div>select ::slotted(*) {
     background: rgb(222, 75, 24, 0.28) !important;
   } */
-  .tutorRow{
+.tutorRow {
     display: flex;
     flex-direction: row !important;
     flex-wrap: wrap;
-    
-    
-  }
- 
-  .tutorRow>li{
+
+
+}
+
+.tutorRow>li {
     display: flex;
     flex-direction: column !important;
-    font-weight: 400px;
-    gap: 10px !important;
-  }
-  .tutorInfo{
+    font-weight: 400;
+    gap: 0.625rem !important;
+}
+
+.tutorInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-  }
-  .tutorRow li .name{
+}
+
+.tutorRow li .name {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-  }
-  .tutorRow li .course{
+    font-size: 1rem;
+}
+
+.tutorRow li .course {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-  }
-  .tutorProfile{
+    font-size: 0.875rem;
+}
+
+.tutorProfile {
     border: 1px solid #D9734C;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 400px;
-  }
-  .tutorProfile:active, .tutorProfile:focus{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.tutorProfile:active,
+.tutorProfile:focus {
     background: #000000;
     color: #ffffff;
-  }
-  .moreTutorInfo{
+}
+
+.moreTutorInfo {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
-  }
-  .moreTutorInfo .tutorInfo{
+    margin-top: 1.875rem;
+}
+
+.moreTutorInfo .tutorInfo {
     /* align-items: start; */
-    margin-top: 20px;
-  }
-  .tutorInfoDiv li{
+    margin-top: 1.25rem;
+}
+
+.tutorInfoDiv li {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 14px;
-    margin-left: 20px;
+    font-size: 0.875rem;
+    margin-left: 1.25rem;
     list-style: circle;
     align-items: start !important;
-    
-  }
-  .tutorInfoDiv li span, .tutorInfoDiv li p{
+
+}
+
+.tutorInfoDiv li span,
+.tutorInfoDiv li p {
     font-weight: 400;
-    
-  }
-  .tutorInfoDiv li p{
+
+}
+
+.tutorInfoDiv li p {
     display: flex;
     flex-wrap: wrap !important;
-  }
-  .tutorInfoDiv>div{
+}
+
+.tutorInfoDiv>div {
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    margin-left: 50px;
-    margin-top: 10px;
-  }
-  .upcomingAlert .tutorDetails{
+    gap: 1.875rem;
+    margin-left: 3.125rem;
+    margin-top: 0.625rem;
+}
+
+.upcomingAlert .tutorDetails {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
-    
-  }
-  .upcomingAlert .tutorDetails>div>div>p{
+    gap: 1.25rem;
+
+}
+
+.upcomingAlert .tutorDetails>div>div>p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
-  }
-  .moreTutorInfo .upcomingAlert>p{
+}
+
+.moreTutorInfo .upcomingAlert>p {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1.0625rem;
     text-align: center;
     width: 100%;
-  }
-  .moreTutorInfo .upcomingAlert>h5{
+}
+
+.moreTutorInfo .upcomingAlert>h5 {
     text-align: center;
     width: 100%;
-  }
-  .moreTutorInfo .upcomingAlert>p>span{
+}
+
+.moreTutorInfo .upcomingAlert>p>span {
     color: var(--brown);
-  }
-  .moreTutorInfo .upcomingAlert{
+}
+
+.moreTutorInfo .upcomingAlert {
     top: 15%;
-    min-width: 509px;
-  }
-  .moreTutorInfo .buttons button{
-  }
+    min-width: 31.8125rem;
+}
+
+/* .moreTutorInfo .buttons button{
+  } */
+.paymentDiv {
+    display: flex;
+    flex-direction: column !important;
+
+}
+
+.paymentDiv .tutorInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+    margin-bottom: 3.125rem;
+}
+
+.paymentDiv>form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.radioInputs,
+.radioInputs div {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* .radioInputs div{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  } */
+.radioInputs p {
+    padding-right: 3.125rem;
+}
+
+.paymentDiv>form {
+    width: 50%;
+}
+
+.paymentDiv>form>div {
+    max-width: 100% !important;
+    justify-content: space-between !important;
+
+}
+
+.paymentDiv>form>div>div>label {
+    padding-right: 3.125rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.paymentDiv>form>div>div input {
+    background: #E2E8F0;
+    box-shadow: 0 0 2 0 rgb(0, 0, 0, 0.75);
+}
+
+.paymentDiv button {
+    width: fit-content;
+    display: flex;
+    align-self: flex-end;
+}
+
+.bankTransfer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.bankTransfer ul {
+    margin-top: 1.875rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.bankTransfer span {
+    font-weight: 400;
+}
+
+/* .listStyle li{
+    list-style: square;
+    list-style-type: decimal;
+    li
+  } */
+
+/* MOBILE */
+.mobileUpcomingClasses {
+    font-family: 'Inter', sans-serif;
+    color: #242F48 !important;
+}
+
+.mobileUpcomingClasses .course,
+.daysTime {
+    display: flex;
+    flex-direction: column !important;
+    gap: 0 !important;
+    color: #242F48 !important;
+}
+
+.mobileUpcomingClasses .course,
+.daysTime p,
+.mobileRow1>div h6,
+.mobileRow1>div h6,
+.seeAll,
+.mobileRow2 h6,
+.mobileRow2 li .tutor,
+.mobileRow2 .messages .name,
+.mobileNotification>p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #242F48 !important;
+
+}
+
+.subList a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #242F48 !important;
+}
+
+.seeAll {
+    color: #0162e8 !important;
+}
+
+.mobileUpcomingClasses .date,
+.daysTime button,
+.date2,
+.mobileRow2 .messages .message {
+    font-weight: 500 !important;
+    font-size: 0.625rem !important;
+    background: none !important;
+    padding: 0 !important;
+    color: #242F48 !important;
+}
+
+.mobileRow1>div,
+.mobileRow2>div {
+    border: 1px solid rgb(36, 47, 72, 0.18);
+    border-radius: 0.3125rem;
+    padding: 1rem;
+    margin: 0 3%;
+    width: 100%;
+}
+
+.mobileRow1>div li,
+.mobileRow2>div li {
+    padding-left: 0;
+    gap: 1rem;
+}
+
+.mobileRow1 {
+    border-top: none;
+}
+
+.subPages {
+    padding: 0 !important;
+}
+
+.subList {
+    display: flex;
+    flex-direction: row !important;
+    color: #242F48;
+    border-bottom: 0.5px solid #d1c7c7;
+    width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.subList a {
+    min-width: 6.75rem;
+    padding: 1rem 0.5rem 0.75rem 0.5rem;
+}
+
+@media (max-width: 560px) {
+    .upcomingClasses li .daysTime {
+        align-items: flex-start !important;
+    }
+
+    .upcomingClasses li {
+        justify-content: space-between;
+
+    }
+
+    .classIcon {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .testList {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .testRow1,
+    .testRow2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 1rem 1rem 1rem;
+        font-family: 'Inter', sans-serif;
+        color: #242F48;
+    }
+
+    .testRow1 {
+        border-bottom: 1px solid rgb(36, 47, 72, 6%);
+
+    }
+
+    .testRow2 {
+        text-align: center;
+    }
+
+    /* .testRow1>div, .testRow2>div{
+        display: flex;
+        flex-direction: row;
+    } */
+    .testRow1 .dateTime {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .testRow1 .title,
+    .upcoming,
+    .pass,
+    .fail {
+
+        font-weight: 500;
+        font-size: 0.75rem;
+    }
+
+    .testRow1 .dateTime {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .testRow2>div>p,
+    .testRow1 .dateTime,
+    .miniTitle, .mobileNotification .notificationList .notifications {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 0.625rem;
+        color: #242F48;
+    }
+
+    .tablePagination>h3 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .tablePagination {
+        gap: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .tablePagination ul {
+        display: flex;
+        gap: 1.25rem;
+        width: 100%;
+        margin: 0 4%;
+    }
+
+    .tablePagination ul li {
+        background: #ffffff;
+        border: 1px solid rgb(36, 47, 72, 6%);
+        padding-left: 0;
+    }
+
+    .main {
+        background: #FCFCF7;
+    }
+
+    .upcoming,
+    .pass,
+    .fail {
+        position: unset;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .upcoming {
+        color: #E2AD18;
+    }
+
+    .pagination {
+        margin: 1.5rem 4% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pagination li {
+        padding: 0 !important;
+    }
+
+    .mobileNotification {
+        padding-left: 2rem;
+        padding-right: 4%;
+    }
+
+    .mobileNotification .notificationList li input {
+        display: none;
+    }
+}

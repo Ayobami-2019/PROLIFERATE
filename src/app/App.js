@@ -18,7 +18,9 @@ import { Reschedule } from './components/dashboard/Reschedule.jsx';
 import { Feedback } from './components/dashboard/Feedback.jsx';
 import { SettingsDashboard } from './components/dashboard/Settings.jsx';
 import { LoginSettings } from './components/dashboard/LoginSettings.jsx';
-import { AddNewDashboard } from './components/dashboard/Add.jsx';
+import { AddNewDashboard, Payment } from './components/dashboard/Add.jsx';
+import { AssignmentDashboard } from './components/dashboard/Assignments.jsx';
+import { ManageTutors, TutorDashboard } from './components/dashboard/Tutor.jsx';
 
 const router = createBrowserRouter([
   {
@@ -137,6 +139,26 @@ const router = createBrowserRouter([
     path: routes.addDashboard(),
     element: <AddNewDashboard />
   },
+  {
+    path: routes.assignmentDashboard(),
+    element: <AssignmentDashboard />
+  },
+  {
+    path: routes.submitAssignment(),
+    element: <AssignmentDashboard />
+  },
+  {
+    path: routes.manageTutor(),
+    element: <ManageTutors />
+  },
+  {
+    path: routes.tutorDashboard(),
+    element: <TutorDashboard />
+  },
+  // {
+  //   path: routes.paymentDashboard(),
+  //   element: <Payment/>
+  // },
   {
     path: '*',
     element: <h1>404</h1>
