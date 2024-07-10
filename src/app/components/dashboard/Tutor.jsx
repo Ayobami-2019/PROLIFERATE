@@ -19,7 +19,7 @@ export const TutorDashboard = () => {
     const [index, setIndex] = React.useState()
     const [info, setInfo] = React.useState()
     const handleMore = (tutor) => {
-        console.log(tutor)
+        // console.log(tutor)
         // setIndex(tutor.name)
         setInfo(tutor)
         // Navigate(routes.medicineDetail())
@@ -86,7 +86,7 @@ export const ManageTutors = () => {
     const [index, setIndex] = React.useState()
     const [info, setInfo] = React.useState()
     const handleMore = (tutor) => {
-        console.log(tutor)
+        // console.log(tutor)
         // setIndex(tutor.name)
         setInfo(tutor)
         // Navigate(routes.medicineDetail())

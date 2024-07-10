@@ -12,20 +12,22 @@ import { useMediaQuery } from '@chakra-ui/react'
 import { DashboardHeader } from '../layout';
 import style2 from './style2.module.css'
 import { sideBarNav } from '../sidebar/data';
-
+import { ChakraProvider } from "@chakra-ui/react";
 
 export const Overview = () => {
     const mobileSideBar = useMediaQuery('(max-width: 560px)')
     return (
         <>
-            {mobileSideBar.includes(true) ?
-                <section className={style.login}>
-                    <DashboardHeader>Dashboard</DashboardHeader>
-                    <MobileDashboardMain />
-                </section> :
-                <Dashboard>
-                    <DashboardMain />
-                </Dashboard>}
+            <ChakraProvider>
+                {mobileSideBar.includes(true) ?
+                    <section className={style.login}>
+                        <DashboardHeader>Dashboard</DashboardHeader>
+                        <MobileDashboardMain />
+                    </section> :
+                    <Dashboard>
+                        <DashboardMain />
+                    </Dashboard>}
+            </ChakraProvider>
         </>
     )
 }

@@ -2,11 +2,12 @@ import { ReactComponent as Logo } from '../../assets/images/logo.svg';
 import { Search } from '../input';
 import { headerNav } from './data';
 import style from './style.module.css'
+import { ChakraProvider } from "@chakra-ui/react";
 
 
 export const Header = () => {
     return (
-        <header className={style.header}>
+        <ChakraProvider><header className={style.header}>
             <Logo className={style.logo} />
             <Search />
             <ul>
@@ -15,6 +16,7 @@ export const Header = () => {
                 )}
             </ul>
         </header>
+        </ChakraProvider>
     )
 }
 

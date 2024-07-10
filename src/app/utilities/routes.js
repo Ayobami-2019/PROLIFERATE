@@ -111,6 +111,8 @@ export const routes={
     },
     paymentDashboard(){
         return '/add/payment'
+    },
+    class(){
+        return '/class'
     }
-
 }

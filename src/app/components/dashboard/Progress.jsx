@@ -3,7 +3,7 @@ import { upcomingClasses, progress } from './data'
 import style from './style.module.css'
 import { ReactComponent as Time } from "../../assets/icon/time.svg";
 import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-
+import { ChakraProvider } from "@chakra-ui/react";
 // import { Progress } from '@chakra-ui/react'
 // import ProgressBar from "@ramonak/react-progress-bar";
 // import { TablePagination } from 'react-pagination-table';
@@ -19,7 +19,8 @@ export const ProgressDashboard = () => {
     const mobileSideBar = useMediaQuery('(max-width: 560px)')
     return (
         <>
-            {mobileSideBar.includes(true) ?
+            <ChakraProvider>
+                {mobileSideBar.includes(true) ?
                 <section className={style.login}>
                     <DashboardHeader>Dashboard</DashboardHeader>
                     <MobileProgress />
@@ -30,6 +31,7 @@ export const ProgressDashboard = () => {
                         <ProgressTable />
                     </section>
                 </Dashboard>}
+                </ChakraProvider>
         </>
 
 
@@ -64,13 +66,13 @@ export const ProgressTable = () => {
         //     const newClass= getClass.classList.add('newClass')
 
     }
-    console.log(currentPage)
+    // console.log(currentPage)
     // currentPage===true ? console.log(false) : console.log(true)
     return (
         <section className={style.tableDiv}>
             <div className={style.tablePagination}>
                 <h3>Quiz and Test Scores</h3>
-                <ul class="pagination">
+                <ul className={combinedClasses(style.pagination, "pagination")}>
                     <li class="page-item">
                         <a class="page-link" href="#" ><MdOutlineKeyboardDoubleArrowLeft onClick={previousPage} /></a>
                     </li>
@@ -151,7 +153,7 @@ export const MobileProgress = () => {
         //     const newClass= getClass.classList.add('newClass')
 
     }
-    console.log(currentPage)
+    // console.log(currentPage)
     // currentPage===true ? console.log(false) : console.log(true)
     return (
         <section className={style.main}>
@@ -169,7 +171,7 @@ export const MobileProgress = () => {
 
                 {/* <table className={style.progressTable}> */}
 
-                <ul >
+                <ul className={style.tableContent}>
                     {records.map((list, index) =>
                         <li key={index} className={combinedClasses(style.testList, 
                         // index === records.length - 1 ? style.noborder : style.border
@@ -189,6 +191,7 @@ export const MobileProgress = () => {
                                     </div>
                                 </div>
                             </div>
+                            {!list.upcoming && 
                             <div className={style.testRow2}>
                                 <div>
                                     <p>Marks</p>
@@ -206,7 +209,7 @@ export const MobileProgress = () => {
                                     <p>Wrong</p>
                                     <p>{list.wrong}</p>
                                 </div>
-                            </div>
+                            </div>}
                         </li>
                     )}
                 </ul>

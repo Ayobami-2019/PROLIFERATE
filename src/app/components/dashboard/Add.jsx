@@ -5,7 +5,7 @@ import { CustomInput } from '../input';
 import { classes, courses, tutors } from './data';
 
 import React from 'react';
-import { MyRating } from '../rating';
+import MyRating  from '../rating';
 import { Link } from 'react-router-dom';
 import { routes } from '../../utilities/routes';
 import { combinedClasses } from '../../utilities/format';
@@ -169,7 +169,7 @@ export const AddNewDashboard = () => {
 export const TutorDetails=(props)=>{
     const info = useContext(TutorContext);
     const tutorInfo=props.info
-    console.log(tutorInfo)
+    // console.log(tutorInfo)
     return(
         <ul className={style.listStyle}>
             <li>Subject Expertise: 

@@ -186,3 +186,5 @@ export const assignmentList=[
     {subject: 'Art', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'},
     {subject: 'Art', description: "Show workings on a separate sheet", documents: ['Maria Rodriguez', 'hello', 'hiii'], date: '21/12/23'}
 ]
+
+export const suggestions=['Great communication', 'Tutor was excellent', 'Good Teaching', 'Went extra mile']

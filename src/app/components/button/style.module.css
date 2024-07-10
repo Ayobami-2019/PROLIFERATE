@@ -21,8 +21,13 @@
     
   }
   .nofill{
-    border: 1px solid #000000;
+    border: 1px solid var(--button-hover);
     background: #F2F1F1;
     color: var(--button-hover);
+  }
+  @media (max-width: 560px) {
+    .nofill{
+      background: none;
+    }
   }
   

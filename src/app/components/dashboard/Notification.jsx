@@ -7,6 +7,7 @@ import { DashboardHeader } from '../layout';
 import { sideBarNav } from '../sidebar/data';
 import { NavLink } from "react-router-dom";
 import { combinedClasses } from "../../utilities/format";
+import { ChakraProvider } from "@chakra-ui/react";
 
 
 export const NotificationDashboard = () => {
@@ -16,32 +17,34 @@ export const NotificationDashboard = () => {
     }
     return (
         <>
-            {mobileSideBar.includes(true) ?
-                <section className={style.login}>
-                    <DashboardHeader>Dashboard</DashboardHeader>
-                    <MobileNotification />
-                </section> :
+            <ChakraProvider>
+                {mobileSideBar.includes(true) ?
+                    <section className={style.login}>
+                        <DashboardHeader>Dashboard</DashboardHeader>
+                        <MobileNotification />
+                    </section> :
 
-                <Dashboard>
-                    <section className={style.main}>
-                        <h3>Notification</h3>
-                        <ul className={style.notificationList}>
-                            {notification.map((list, index) =>
-                                <li key={index}>
-                                    <input
-                                        // onChange={handleInput} 
-                                        id="status" name="checkbox" type="checkbox" />
-                                    {list.icon}
-                                    <div className={style.notifications}>
-                                        <p>{list.message}</p>
-                                        <p>{list.time}</p>
-                                    </div>
-                                    <DeleteIcon onClick={() => handleDelete(index)} />
-                                </li>
-                            )}
-                        </ul>
-                    </section>
-                </Dashboard>}
+                    <Dashboard>
+                        <section className={style.main}>
+                            <h3>Notification</h3>
+                            <ul className={style.notificationList}>
+                                {notification.map((list, index) =>
+                                    <li key={index}>
+                                        <input
+                                            // onChange={handleInput} 
+                                            id="status" name="checkbox" type="checkbox" />
+                                        {list.icon}
+                                        <div className={style.notifications}>
+                                            <p>{list.message}</p>
+                                            <p>{list.time}</p>
+                                        </div>
+                                        <DeleteIcon onClick={() => handleDelete(index)} />
+                                    </li>
+                                )}
+                            </ul>
+                        </section>
+                    </Dashboard>}
+            </ChakraProvider>
         </>
     )
 }
@@ -49,7 +52,7 @@ export const NotificationDashboard = () => {
 export const MobileNotification = () => {
     const mobileSideBar = useMediaQuery('(max-width: 560px)')
     const handleDelete = (id) => {
-        id.removeItem('user')
+        // id.removeItem('user')
     }
     return (
         <section className={style.main}>
@@ -69,12 +72,12 @@ export const MobileNotification = () => {
                             <input
                                 // onChange={handleInput} 
                                 id="status" name="checkbox" type="checkbox" />
-                            <div>{list.icon}</div>
+                            <div className={style.notificationIcon}>{list.icon}</div>
                             <div className={style.notifications}>
                                 <p>{list.message}</p>
                                 <p>{list.time}</p>
                             </div>
-                            <div><DeleteIcon onClick={() => handleDelete(index)} /></div>
+                            <div className={style.deleteIcon}><DeleteIcon onClick={() => handleDelete(index)} /></div>
                         </li>
                     )}
                 </ul>

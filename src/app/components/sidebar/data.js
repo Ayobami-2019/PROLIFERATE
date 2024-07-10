@@ -100,6 +100,12 @@ export const sideBarNav = [
     {id: 4, icon: <Message />, title: 'Messaging', url: newRoutes.messageDashboard },
     {id: 5, icon: <Earnings />, title: 'Payment', url: newRoutes.paymentDashboard() },
     {id: 6, icon: <Feedback />, title: 'Feedback', url: newRoutes.feedback() },
-    {id: 7, icon: < Settings />, title: 'Settings', url: newRoutes.profileSettings() },
+    {id: 7, icon: < Settings />, title: 'Settings', url: newRoutes.profileSettings(), 
+        subtitle: [
+            {id: 0, title: 'Account Settings', url: newRoutes.classes() },
+            {id: 1, title: 'Login & Security', url: newRoutes.upcoming() },
+            {id: 2, title: 'Profile Summary', url: newRoutes.addDashboard() }
+        ]
+    },
     {id: 8, icon: <LogoutIcon />, title: 'Logout', url: '' }
 ]

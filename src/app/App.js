@@ -1,5 +1,5 @@
 
-
+import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { routes } from './utilities/routes.js';
@@ -21,6 +21,12 @@ import { LoginSettings } from './components/dashboard/LoginSettings.jsx';
 import { AddNewDashboard, Payment } from './components/dashboard/Add.jsx';
 import { AssignmentDashboard } from './components/dashboard/Assignments.jsx';
 import { ManageTutors, TutorDashboard } from './components/dashboard/Tutor.jsx';
+import { StyledEngineProvider } from '@mui/material/styles';
+import { createContext } from 'react';
+import { tutors } from '../app/components/dashboard/data.js';
+
+export const GlobalContext = createContext()
+
 
 const router = createBrowserRouter([
   {
@@ -167,17 +173,26 @@ const router = createBrowserRouter([
   //   path: routes.summary(),
   //   element: <Feedback/>
   // },
- 
+
 
 ])
 function App() {
-  // const [info, setInfo] = React.useState({})
+  // const [info, setInfo] = React.useState()
+  const globalData ={tutors}
+  // console.log(globalData.tutors)
+  // setInfo(g)
   return (
     <>
-      <ChakraProvider>
+      {/* <ChakraProvider>
+        <StyledEngineProvider injectFirst> */}
+      <GlobalContext.Provider value={globalData.tutors}>
+
         <ToastContainer />
         <RouterProvider router={router} />
-      </ChakraProvider>
+      </GlobalContext.Provider>
+      {/* </StyledEngineProvider>
+      </ChakraProvider> */}
+
     </>
   );
 }

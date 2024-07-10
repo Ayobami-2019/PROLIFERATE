@@ -66,12 +66,14 @@ export const Search = (...props) => {
             .then(result => {
 
                 setData(result.data);
-                console.log(data)
+                // console.log(data)
             })
-            .catch(error => console.log(error))
+            .catch(error => 
+                console.log('error')
+            )
     }, [])
     const search = (data) => {
-        console.log(data)
+        // console.log(data)
         return data.filter((item) => {
             return searchParam.some((newItem) => {
                 return (
