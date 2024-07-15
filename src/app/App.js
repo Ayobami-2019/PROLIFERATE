@@ -18,12 +18,13 @@ import { Reschedule } from './components/dashboard/Reschedule.jsx';
 import { Feedback } from './components/dashboard/Feedback.jsx';
 import { SettingsDashboard } from './components/dashboard/Settings.jsx';
 import { LoginSettings } from './components/dashboard/LoginSettings.jsx';
-import { AddNewDashboard, Payment } from './components/dashboard/Add.jsx';
+import { AddNewDashboard} from './components/dashboard/Add.jsx';
 import { AssignmentDashboard } from './components/dashboard/Assignments.jsx';
 import { ManageTutors, TutorDashboard } from './components/dashboard/Tutor.jsx';
 import { StyledEngineProvider } from '@mui/material/styles';
 import { createContext } from 'react';
 import { tutors } from '../app/components/dashboard/data.js';
+import { MobilePayment } from './components/dashboard/Payment.jsx';
 
 export const GlobalContext = createContext()
 
@@ -161,10 +162,10 @@ const router = createBrowserRouter([
     path: routes.tutorDashboard(),
     element: <TutorDashboard />
   },
-  // {
-  //   path: routes.paymentDashboard(),
-  //   element: <Payment/>
-  // },
+  {
+    path: routes.paymentDashboard(),
+    element: <MobilePayment/>
+  },
   {
     path: '*',
     element: <h1>404</h1>

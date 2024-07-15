@@ -60,7 +60,7 @@ a:-webkit-any-link {
 ul {
   margin-block-start: inherit;
   margin-block-end: inherit;
-  padding-inline-start: none;
+  padding-inline-start: 0;
 }
 
 button {
@@ -172,13 +172,25 @@ label .css-7roig {
 .css-efhinx .css-9fgtzh {
   font-weight: 700;
   font-size: 1.5rem;
+  padding-bottom: 0;
 }
 
 .css-efhinx .css-qlig70 {
   font-weight: 400;
   font-size: 1rem;
 }
-
+.tutorAlert div, .tutorAlert header{
+  text-align: center;
+  font-family: 'IBM Plex Sans';
+}
+.tutorAlert header{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.tutorAlert p{
+  font-weight: 400;
+  font-size: 0.875rem;
+}
 .css-efhinx .css-ez23ye {
   font-family: "IBM Plex Sans", sans-serif;
   color: #1F1F1F;
@@ -190,9 +202,9 @@ label .css-7roig {
   background: none !important;
 }
 
-.css-1ik4h6n {
+/* .css-1ik4h6n {
   display: none !important;
-}
+} */
 
 /* datepoicker */
 .css-1rtg91x-MuiDateCalendar-root {
@@ -261,6 +273,9 @@ label .css-7roig {
     font-weight: 600;
     font-size: 0.9395rem;
   }
+  .css-efhinx .css-qlig70 {
+    padding: 1rem;
+}
   
   .css-efhinx .css-qlig70 ul li {
   list-style: none;
